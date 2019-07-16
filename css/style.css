@@ -81,9 +81,11 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
 
-.templateux-hero, .intro { height: 85vh; min-height: 250px; }
-
+.templateux-hero, .intro { height: 75vh; min-height: 100px; }
+.templateux-hero, .intro { position: relative; left: 0; top: -30; }
 .templateux-hero h1, .intro h1 { color: #000; font-size: 70px; }
+.templateux-hero h2, .intro h2 { color: #000; font-size: 50px; }
+.templateux-hero p, .intro p { color: rgb(85, 85, 85); font-size: 22px; }
 
 @media (max-width: 991.98px) { .templateux-hero h1, .intro h1 { font-size: 36px; } }
 
