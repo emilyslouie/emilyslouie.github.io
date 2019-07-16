@@ -149,12 +149,13 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 .project:hover .project-hover .project-hover-inner span, .project:hover .project-hover .post-hover-inner span, .project:hover .post-hover .project-hover-inner span, .project:hover .post-hover .post-hover-inner span, .project:focus .project-hover .project-hover-inner span, .project:focus .project-hover .post-hover-inner span, .project:focus .post-hover .project-hover-inner span, .project:focus .post-hover .post-hover-inner span, .post:hover .project-hover .project-hover-inner span, .post:hover .project-hover .post-hover-inner span, .post:hover .post-hover .project-hover-inner span, .post:hover .post-hover .post-hover-inner span, .post:focus .project-hover .project-hover-inner span, .post:focus .project-hover .post-hover-inner span, .post:focus .post-hover .project-hover-inner span, .post:focus .post-hover .post-hover-inner span { bottom: 0; visibility: visible; opacity: 1; }
 
 .templateux-footer { padding: 7em 0; border-top: 1px solid #F4F4F4; }
-
+.templateux-footer {position: center;}
 .templateux-footer .container-fluid { max-width: 100%; }
 
 .templateux-footer small { font-size: 16px; }
 
 .templateux-footer p:last-child { margin-bottom: 0; }
+.templateux-footer p {font-size: 15px; }
 
 .templateux-footer .footer-social { position: relative; }
 
