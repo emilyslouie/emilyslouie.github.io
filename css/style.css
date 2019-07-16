@@ -42,7 +42,9 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 @media (max-width: 767.98px) { .templateux-navbar .templateux-menu { position: fixed; width: 100%; background-color: #fff; top: 0; left: 0; margin: 0; text-align: left; height: 100vh; min-height: 400px; padding: 15px; display: none; padding-top: 100px; overflow-y: scroll; }
   .templateux-navbar .templateux-menu ul { margin-left: 40px; }
+  
   .templateux-navbar .templateux-menu ul li { display: block; margin-bottom: 10px; }
+  
   .templateux-navbar .templateux-menu ul li a { padding: 10px 0 2px 0; font-size: 18px; display: inline-block; } }
 
 @media (max-width: 767.98px) { .templateux-navbar .templateux-menu ul { margin-left: 0px; } }
@@ -81,24 +83,31 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
 
-.templateux-hero, .intro { height: 75vh; min-height: 100px; }
-.templateux-hero, .intro { position: relative; left: 0; top: -30; }
+.templateux-hero, .intro { height: 80vh; min-height: 100px; }
+
+.templateux-hero, .intro { position: relative; left: 0; top: -32; }
+
 .templateux-hero h1, .intro h1 { color: #000; font-size: 70px; }
+
 .templateux-hero h2, .intro h2 { color: #000; font-size: 50px; }
+
 .templateux-hero p, .intro p { color: rgb(85, 85, 85); font-size: 22px; }
 
 @media (max-width: 991.98px) { .templateux-hero h1, .intro h1 { font-size: 36px; } }
 
 .templateux-portfolio-overlap { position: relative; margin-top: -100px; }
+
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
+
 .templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 2px; }
+
 @media (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: -50px; } }
 
 .container-fluid { padding-left: 50px; padding-right: 50px; max-width: 1600px; }
 
 @media (max-width: 767.98px) { .container-fluid { padding-left: 15px; padding-right: 15px; } }
 
-.templateux-section { padding: 7em 0; }
+.templateux-section { padding: 3em 0; }
 
 @media (max-width: 991.98px) { .templateux-section { padding: 3em 0; } }
 
@@ -148,13 +157,16 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 .project:hover .project-hover .project-hover-inner span, .project:hover .project-hover .post-hover-inner span, .project:hover .post-hover .project-hover-inner span, .project:hover .post-hover .post-hover-inner span, .project:focus .project-hover .project-hover-inner span, .project:focus .project-hover .post-hover-inner span, .project:focus .post-hover .project-hover-inner span, .project:focus .post-hover .post-hover-inner span, .post:hover .project-hover .project-hover-inner span, .post:hover .project-hover .post-hover-inner span, .post:hover .post-hover .project-hover-inner span, .post:hover .post-hover .post-hover-inner span, .post:focus .project-hover .project-hover-inner span, .post:focus .project-hover .post-hover-inner span, .post:focus .post-hover .project-hover-inner span, .post:focus .post-hover .post-hover-inner span { bottom: 0; visibility: visible; opacity: 1; }
 
-.templateux-footer { padding: 7em 0; border-top: 1px solid #F4F4F4; }
+.templateux-footer { padding: 4em 0; border-top: 1px solid #F4F4F4; }
+
 .templateux-footer {position: center;}
+
 .templateux-footer .container-fluid { max-width: 100%; }
 
 .templateux-footer small { font-size: 16px; }
 
 .templateux-footer p:last-child { margin-bottom: 0; }
+
 .templateux-footer p {font-size: 15px; }
 
 .templateux-footer .footer-social { position: relative; }
@@ -179,7 +191,7 @@ textarea.form-control { height: inherit; }
 
 .button.button--red:hover { text-decoration: none; color: #fff; -webkit-box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4); box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4); background: #d32535; }
 
-.go-down { position: relative; width: 40px; height: 40px; display: block; margin-left: -15px; position: absolute; margin-top: 70px; }
+.go-down { position: relative; width: 40px; height: 40px; display: block; margin-left: -15px; position: absolute; margin-top: 15px; }
 
 .go-down:before { width: 2px; height: 40px; right: 27px; content: ""; display: block; position: absolute; background: #dc3545; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; top: 0; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
 
