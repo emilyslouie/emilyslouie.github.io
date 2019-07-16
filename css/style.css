@@ -90,7 +90,8 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 @media (max-width: 991.98px) { .templateux-hero h1, .intro h1 { font-size: 36px; } }
 
 .templateux-portfolio-overlap { position: relative; margin-top: -100px; }
-
+.templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
+.templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 2px; }
 @media (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: -50px; } }
 
 .container-fluid { padding-left: 50px; padding-right: 50px; max-width: 1600px; }
