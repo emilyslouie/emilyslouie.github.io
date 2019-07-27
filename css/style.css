@@ -83,7 +83,7 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
 
-.templateux-hero, .intro { height: 80vh; min-height: 100px; }
+.templateux-hero, .intro { height: 85vh; min-height: 100px; }
 
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
 
