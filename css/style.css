@@ -10,7 +10,7 @@ a { -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .
 
 a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
-.templateux-navbar { position: absolute; top: 0; left: 0; width: 100%; padding: 35px 0; z-index: 99999; }
+.templateux-navbar { position: fixed; top: 0; left: 0; width: 100%; height: 77px; padding: 25px 0; z-index: 99999; background-color: white; }
 
 .templateux-navbar .container-fluid { max-width: 100%; }
 
@@ -82,14 +82,15 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 .templateux-hero.overlay h1 { color: #fff; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
+section { height: 100vh; }
 
-.templateux-hero, .intro { height: 85vh; min-height: 100px; }
+.templateux-hero, .intro { height: 100vh; min-height: 100px; }
 
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
 
 .templateux-hero h1, .intro h1 { color: #000; font-size: 70px; }
 
-.templateux-hero h2, .intro h2 { color: #000; font-size: 50px; }
+.templateux-hero h2, .intro h2 { color: #000; font-size: 42px; }
 
 .templateux-hero p, .intro p { color: rgb(85, 85, 85); font-size: 22px; }
 
@@ -191,7 +192,7 @@ textarea.form-control { height: inherit; }
 
 .button.button--red:hover { text-decoration: none; color: #fff; -webkit-box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4); box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4); background: #d32535; }
 
-.go-down { position: relative; width: 40px; height: 40px; display: block; margin-left: -15px; position: absolute; margin-top: 15px; }
+.go-down { position: relative; right: 25px; width: 40px; height: 40px; display: block; position: absolute; margin-top: 15px; }
 
 .go-down:before { width: 2px; height: 40px; right: 27px; content: ""; display: block; position: absolute; background: #dc3545; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); pointer-events: none; top: 0; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
 
