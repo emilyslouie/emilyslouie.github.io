@@ -10,7 +10,7 @@ a { -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .
 
 a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
-.templateux-navbar { position: fixed; top: 0; left: 0; width: 100%; height: 77px; padding: 25px 0; z-index: 99999; background-color: white; }
+.templateux-navbar { position: fixed; top: 0; left: 0; width: 100%; height: 77px; padding: 25px 0; z-index: 99999; background-color: #FFFFFF;}
 
 .templateux-navbar .container-fluid { max-width: 100%; }
 
@@ -88,11 +88,11 @@ section { height: 100vh; }
 
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
 
-.templateux-hero h1, .intro h1 { color: #000; font-size: 70px; }
+.templateux-hero h1, .intro h1 { color: #000; font-size: 80px; }
 
-.templateux-hero h2, .intro h2 { color: #000; font-size: 42px; }
+.templateux-hero h2, .intro h2 { color: #000; font-size: 60px; }
 
-.templateux-hero p, .intro p { color: rgb(85, 85, 85); font-size: 22px; }
+.templateux-hero p, .intro p { color: rgb(85, 85, 85); font-size: 26px; }
 
 @media (max-width: 991.98px) { .templateux-hero h1, .intro h1 { font-size: 36px; } }
 
@@ -160,7 +160,7 @@ section { height: 100vh; }
 
 .templateux-footer { padding: 4em 0; border-top: 1px solid #F4F4F4; }
 
-.templateux-footer {position: center;}
+.templateux-footer {position: relative}
 
 .templateux-footer .container-fluid { max-width: 100%; }
 
