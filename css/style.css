@@ -89,20 +89,20 @@ section { height: 100vh; }
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
 .templateux-hero h1, .intro h1 { color: #000; font-size: 80px; }
 
-.templateux-hero h2, .intro h2 { color: #000; font-size: 65px; font-family: 'Signika', sans-serif; font-weight: 500;}
+.templateux-hero h2, .intro h2 { color: #000; font-size: 70px; font-family: 'Signika', sans-serif; font-weight: 500;}
 .templateux-hero u, .intro u {text-decoration: underline; text-decoration-color:#9f314e;}
 
 .templateux-hero p, .intro p { padding-top: 15px; color: rgb(85, 85, 85); font-size: 24px; font-family: 'Roboto', sans-serif; font-weight: 200;}
 .templateux-hero .social { position: relative; text-align: left; margin-left: -15px;}
 
-.templateux-hero .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
+.templateux-hero .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 38px; }
 
 .templateux-hero .social a:hover, .templateux-section .social a:focus { color: #9f314e; -webkit-transform: scale(1.7); -ms-transform: scale(1.7); transform: scale(1.7); }
 @media (max-width: 500px) { .templateux-hero , .intro { padding-left: 2%; padding-right: 2% } }
 @media (max-width: 500px) { .templateux-hero h2, .intro h2 { font-size: 42px; } }
 @media (max-width: 500px) { .templateux-hero p, .intro p { font-size: 20px; } }
-@media (min-width:500px) and (max-width: 1200px) { .templateux-hero h2, .intro h2 { font-size: 72px; } }
-@media (min-width:500px) and (max-width: 1200px) { .templateux-hero p, .intro p { font-size: 40px; } }
+@media (min-width:500px) and (max-width: 1200px) { .templateux-hero h2, .intro h2 { font-size: 56px; } }
+@media (min-width:500px) and (max-width: 1200px) { .templateux-hero p, .intro p { font-size: 22px; } }
 .templateux-portfolio-overlap { position: relative; }
 
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
@@ -111,13 +111,13 @@ section { height: 100vh; }
 
 @media (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
 
-.container-fluid { padding-left: 50px; padding-right: 50px; max-width: 1600px; }
+.container-fluid { padding-left: 50px; padding-right: 50px; max-width: 1600px;}
 
 @media (max-width: 767.98px) { .container-fluid { padding-left: 15px; padding-right: 15px; padding-bottom: 100px} }
 
 .templateux-section { padding: 3em 0; padding-top: 95px;}
 
-@media (max-width: 991.98px) { .templateux-section { padding: 3em 0; } }
+@media (max-width: 991.98px) { .templateux-section { padding: 3em 0;} }
 
 .templateux-section h2 { line-height: 1.5; }
 
@@ -160,9 +160,9 @@ section { height: 100vh; }
 
 .project .project-hover .project-hover-inner, .project .project-hover .post-hover-inner, .project .post-hover .project-hover-inner, .project .post-hover .post-hover-inner, .post .project-hover .project-hover-inner, .post .project-hover .post-hover-inner, .post .post-hover .project-hover-inner, .post .post-hover .post-hover-inner { position: absolute; z-index: 99; left: 50%; top: 50%; visibility: hidden; opacity: 0; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); transition: .3s all ease; text-align: center; }
 
-.project .project-hover .project-hover-inner h2, .project .project-hover .post-hover-inner h2, .project .post-hover .project-hover-inner h2, .project .post-hover .post-hover-inner h2, .post .project-hover .project-hover-inner h2, .post .project-hover .post-hover-inner h2, .post .post-hover .project-hover-inner h2, .post .post-hover .post-hover-inner h2 { color: #fff; font-size: 26px; line-height: 1.2; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; opacity: 0; visibility: hidden; position: relative; bottom: -30px; }
+.project .project-hover .project-hover-inner h2, .project .project-hover .post-hover-inner h2, .project .post-hover .project-hover-inner h2, .project .post-hover .post-hover-inner h2, .post .project-hover .project-hover-inner h2, .post .project-hover .post-hover-inner h2, .post .post-hover .project-hover-inner h2, .post .post-hover .post-hover-inner h2 { font-family: 'Signika', sans-serif; color: #fff; font-size: 46px; line-height: 1.2; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; opacity: 0; visibility: hidden; position: relative; bottom: -30px; }
 
-.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { color: rgba(255, 255, 255, 0.8); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { font-family: 'Roboto', sans-serif; font-weight: 200; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 
 .project:hover .project-hover, .project:hover .post-hover, .project:focus .project-hover, .project:focus .post-hover, .post:hover .project-hover, .post:hover .post-hover, .post:focus .project-hover, .post:focus .post-hover { visibility: visible; opacity: 1; }
 
@@ -172,9 +172,10 @@ section { height: 100vh; }
 
 .project:hover .project-hover .project-hover-inner span, .project:hover .project-hover .post-hover-inner span, .project:hover .post-hover .project-hover-inner span, .project:hover .post-hover .post-hover-inner span, .project:focus .project-hover .project-hover-inner span, .project:focus .project-hover .post-hover-inner span, .project:focus .post-hover .project-hover-inner span, .project:focus .post-hover .post-hover-inner span, .post:hover .project-hover .project-hover-inner span, .post:hover .project-hover .post-hover-inner span, .post:hover .post-hover .project-hover-inner span, .post:hover .post-hover .post-hover-inner span, .post:focus .project-hover .project-hover-inner span, .post:focus .project-hover .post-hover-inner span, .post:focus .post-hover .project-hover-inner span, .post:focus .post-hover .post-hover-inner span { bottom: 0; visibility: visible; opacity: 1; }
 
-.space {padding: 22px}
+@media (max-width: 320px) {.space {padding: 3px;}}
+.space {padding: 52px}
 
-.templateux-footer { padding: 4em 0; border-top: 1px solid #F4F4F4; margin-top: -100px}
+.templateux-footer { padding: 4em 0; border-top: 2px solid #F4F4F4; margin-top: -100px; background-color: white;}
 
 .templateux-footer .container-fluid { max-width: 100%; padding-bottom: 20px}
 
@@ -186,7 +187,7 @@ section { height: 100vh; }
 
 .templateux-footer .footer-social { position: relative; text-align: center;}
 
-.templateux-footer .footer-social a { color: #b3b3b3;  -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 30px; }
+.templateux-footer .footer-social a { color: #b3b3b3;  -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 40px; }
 
 .templateux-footer .footer-social a:hover, .templateux-footer .footer-social a:focus { color: #9f314e; -webkit-transform: scale(1.7); -ms-transform: scale(1.7); transform: scale(1.7); }
 
