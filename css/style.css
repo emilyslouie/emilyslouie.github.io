@@ -82,6 +82,7 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 .templateux-hero.overlay h1 { color: #fff; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
+
 section { height: 100vh; }
 
 .templateux-hero, .intro { height: 100vh; min-height: 100px; }
@@ -103,14 +104,17 @@ section { height: 100vh; }
 @media (max-width: 500px) { .templateux-hero p, .intro p { font-size: 20px; } }
 @media (min-width:500px) and (max-width: 1200px) { .templateux-hero h2, .intro h2 { font-size: 56px; } }
 @media (min-width:500px) and (max-width: 1200px) { .templateux-hero p, .intro p { font-size: 22px; } }
-.templateux-portfolio-overlap { position: relative; }
+.templateux-portfolio-overlap { position: relative; padding-bottom: 1175px}
 
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
 
 .templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 2px; }
-
-@media (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
-
+@media (min-width: 392px) and (max-width: 420px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: 0px; padding-bottom: 1900px} }
+@media (min-width: 421px) and (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
+@media (min-width: 992px) and (max-width: 1025px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: -500px; } }
+@media (max-width: 321px) { .templateux-portfolio-overlap { margin-bottom: -220px}}
+@media (max-width: 361px) { .templateux-portfolio-overlap { padding-bottom: 1900px}}
+@media (max-width: 391px) { .templateux-portfolio-overlap { padding-bottom: 1700px}}
 .container-fluid { padding-left: 50px; padding-right: 50px; max-width: 1600px;}
 
 @media (max-width: 767.98px) { .container-fluid { padding-left: 15px; padding-right: 15px; padding-bottom: 100px} }
@@ -162,7 +166,7 @@ section { height: 100vh; }
 
 .project .project-hover .project-hover-inner h2, .project .project-hover .post-hover-inner h2, .project .post-hover .project-hover-inner h2, .project .post-hover .post-hover-inner h2, .post .project-hover .project-hover-inner h2, .post .project-hover .post-hover-inner h2, .post .post-hover .project-hover-inner h2, .post .post-hover .post-hover-inner h2 { font-family: 'Signika', sans-serif; color: #fff; font-size: 46px; line-height: 1.2; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; opacity: 0; visibility: hidden; position: relative; bottom: -30px; }
 
-.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { font-family: 'Roboto', sans-serif; font-weight: 200; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 
 .project:hover .project-hover, .project:hover .post-hover, .project:focus .project-hover, .project:focus .post-hover, .post:hover .project-hover, .post:hover .post-hover, .post:focus .project-hover, .post:focus .post-hover { visibility: visible; opacity: 1; }
 
@@ -174,7 +178,7 @@ section { height: 100vh; }
 
 @media (max-width: 320px) {.space {padding: 3px;}}
 .space {padding: 52px}
-
+@media (min-width: 992px) and (max-width: 1025px) { .templateux-footer { margin-bottom: -500px; } }
 .templateux-footer { padding: 4em 0; border-top: 2px solid #F4F4F4; margin-top: -100px; background-color: white;}
 
 .templateux-footer .container-fluid { max-width: 100%; padding-bottom: 20px}
