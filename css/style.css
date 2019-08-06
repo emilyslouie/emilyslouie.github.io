@@ -123,8 +123,8 @@ section { height: 100vh; }
 
 @media (max-width: 991.98px) { .templateux-section { padding: 3em 0;} }
 
-.templateux-section h2 { line-height: 1.5; }
-
+.templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 60px;}
+.templateux-section p {line-height: 1.75; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: 200;}
 .templateux-section .social { position: relative; text-align: center; padding-left: -100px;}
 
 .templateux-section .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
