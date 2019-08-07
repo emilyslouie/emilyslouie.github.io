@@ -68,7 +68,7 @@ templateux-navbar .templateux-menu { position: relative; }
 
 @media (max-width: 767.98px) { .menu-open .templateux-menu li a { color: #000 !important; } }
 
-.templateux-hero { background-size: cover; background-repeat: no-repeat; background-position: center center; position: relative; overflow: hidden; }
+.templateux-hero { height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center center; position: relative; overflow: hidden; }
 
 .templateux-hero .lead { font-size: 28px; }
 
@@ -84,13 +84,12 @@ templateux-navbar .templateux-menu { position: relative; }
 
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
 
-section { height: 100vh; }
+section { height: 100vh;}
 .templateux-hero img {max-width: 60px; max-height: 60px; margin-top: -10px; margin-left: 13px;}
 .templateux-hero, .intro { height: 100vh; min-height: 100px; }
 .highlight {background-color: #FFEDF1;}
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
 .templateux-hero h1, .intro h1 { color: #000; font-size: 80px; }
-
 .templateux-hero h2, .intro h2 { color: #000; font-size: 70px; font-family: 'Signika', sans-serif; font-weight: 500;}
 .templateux-hero u, .intro u {text-decoration: underline; text-decoration-color:#9f314e;}
 
@@ -109,7 +108,7 @@ section { height: 100vh; }
 
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
 
-.templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 12px; }
+.templateux-portfolio-overlap p { font-family: 'Roboto', sans-serif; font-size: 20px; color: rgb(85, 85, 85); font-size: 12px; }
 @media (min-width: 392px) and (max-width: 420px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: 0px; padding-bottom: 1900px} }
 @media (min-width: 421px) and (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
 @media (min-width: 992px) and (max-width: 1025px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: -500px; } }
@@ -125,8 +124,10 @@ section { height: 100vh; }
 @media (max-width: 991.98px) { .templateux-section { padding: 3em 0;} }
 
 .templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 60px;}
- 
+.templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 45px;}
 .templateux-section p {line-height: 1.75; font-size: 19px; font-family: 'Roboto', sans-serif; font-weight: 200; margin-right: 5%; padding-top: 5px; padding-bottom: 5px;}
+.templateux-section .work p {margin-bottom:-60px; text-align: center; font-size: 16px;}
+
 .templateux-section .social { position: relative; text-align: center; padding-left: -100px; margin-right: 5%}
 .templateux-section .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
 .templateux-section .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
@@ -260,9 +261,9 @@ textarea.form-control { height: inherit; }
 
 .work-detail { margin-bottom: 50px; }
 
-.work-detail .caption { display: block; text-transform: uppercase; font-size: 15px; color: #ccc; }
+.work-detail .caption { font-family: 'Roboto', sans-serif; font-size: 30px; display: block; text-transform: uppercase; color: #ccc; }
 
-.work-detail strong { font-weight: normal; color: #000; }
+.work-detail strong { font-weight: 500; color: #000; }
 
 .custom-pagination { width: 100%; text-align: center; display: inline-block; }
 
