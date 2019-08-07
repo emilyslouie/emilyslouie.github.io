@@ -20,11 +20,12 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 .templateux-navbar .toggle-menu:active, .templateux-navbar .toggle-menu:focus { outline: none; }
 
-.templateux-navbar .site-logo { position: relative; top: -10px; z-index: 9999; }
+.templateux-navbar .site-logo { position: relative; top: -7px; z-index: 9999; }
 
-.templateux-navbar .site-logo a { margin-left: 15px; font-size: 30px; color: #000; }
-
-.templateux-navbar .templateux-menu { position: relative; }
+.templateux-navbar .site-logo a { margin-left: 15px; font-size: 28px; color: #000; font-family: 'Signika', sans-serif; font-weight: 500;}
+.templateux-navbar img {max-width: 40px; max-height: 40px; margin-top: -12px; margin-left: -3px;}
+.templateux-navbar u, .site-logo u {text-decoration: underline; text-decoration-color:#9f314e;}
+templateux-navbar .templateux-menu { position: relative; }
 
 .templateux-navbar .templateux-menu ul { margin-bottom: 0; }
 
@@ -84,7 +85,7 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 .templateux-hero.overlay .lead { color: #fff; opacity: .5; }
 
 section { height: 100vh; }
-
+.templateux-hero img {max-width: 60px; max-height: 60px; margin-top: -10px; margin-left: 13px;}
 .templateux-hero, .intro { height: 100vh; min-height: 100px; }
 .highlight {background-color: #FFEDF1;}
 .templateux-hero, .intro { position: relative; left: 0; top: -32; }
@@ -108,7 +109,7 @@ section { height: 100vh; }
 
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
 
-.templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 2px; }
+.templateux-portfolio-overlap p { color: rgb(85, 85, 85); font-size: 12px; }
 @media (min-width: 392px) and (max-width: 420px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: 0px; padding-bottom: 1900px} }
 @media (min-width: 421px) and (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
 @media (min-width: 992px) and (max-width: 1025px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: -500px; } }
@@ -124,13 +125,13 @@ section { height: 100vh; }
 @media (max-width: 991.98px) { .templateux-section { padding: 3em 0;} }
 
 .templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 60px;}
-.templateux-section p {line-height: 1.75; font-size: 18px; font-family: 'Roboto', sans-serif; font-weight: 200;}
-.templateux-section .social { position: relative; text-align: center; padding-left: -100px;}
-
+ 
+.templateux-section p {line-height: 1.75; font-size: 19px; font-family: 'Roboto', sans-serif; font-weight: 200; margin-right: 5%; padding-top: 5px; padding-bottom: 5px;}
+.templateux-section .social { position: relative; text-align: center; padding-left: -100px; margin-right: 5%}
+.templateux-section .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
 .templateux-section .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
 
 .templateux-section .social a:hover, .templateux-section .social a:focus { color: #9f314e; -webkit-transform: scale(1.7); -ms-transform: scale(1.7); transform: scale(1.7); }
-
 
 .templateux-cta { padding: 7em 0; display: block; background: #f8f9fa; position: relative; }
 
@@ -165,14 +166,16 @@ section { height: 100vh; }
 .project .project-hover .project-hover-inner, .project .project-hover .post-hover-inner, .project .post-hover .project-hover-inner, .project .post-hover .post-hover-inner, .post .project-hover .project-hover-inner, .post .project-hover .post-hover-inner, .post .post-hover .project-hover-inner, .post .post-hover .post-hover-inner { position: absolute; z-index: 99; left: 50%; top: 50%; visibility: hidden; opacity: 0; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); transition: .3s all ease; text-align: center; }
 
 .project .project-hover .project-hover-inner h2, .project .project-hover .post-hover-inner h2, .project .post-hover .project-hover-inner h2, .project .post-hover .post-hover-inner h2, .post .project-hover .project-hover-inner h2, .post .project-hover .post-hover-inner h2, .post .post-hover .project-hover-inner h2, .post .post-hover .post-hover-inner h2 { font-family: 'Signika', sans-serif; color: #fff; font-size: 46px; line-height: 1.2; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; opacity: 0; visibility: hidden; position: relative; bottom: -30px; }
+.project .project-hover .project-hover-inner p, .project .project-hover .post-hover-inner p, .project .post-hover .project-hover-inner p, .project .post-hover .post-hover-inner p, .post .project-hover .project-hover-inner p, .post .project-hover .post-hover-inner p, .post .post-hover .project-hover-inner p, .post .post-hover .post-hover-inner p { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 21px; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 
-.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+.project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { border: 1px solid white; border-radius: 8px; padding: 7px; font-family: 'Roboto', sans-serif; font-weight: 200; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 
 .project:hover .project-hover, .project:hover .post-hover, .project:focus .project-hover, .project:focus .post-hover, .post:hover .project-hover, .post:hover .post-hover, .post:focus .project-hover, .post:focus .post-hover { visibility: visible; opacity: 1; }
 
 .project:hover .project-hover .project-hover-inner, .project:hover .project-hover .post-hover-inner, .project:hover .post-hover .project-hover-inner, .project:hover .post-hover .post-hover-inner, .project:focus .project-hover .project-hover-inner, .project:focus .project-hover .post-hover-inner, .project:focus .post-hover .project-hover-inner, .project:focus .post-hover .post-hover-inner, .post:hover .project-hover .project-hover-inner, .post:hover .project-hover .post-hover-inner, .post:hover .post-hover .project-hover-inner, .post:hover .post-hover .post-hover-inner, .post:focus .project-hover .project-hover-inner, .post:focus .project-hover .post-hover-inner, .post:focus .post-hover .project-hover-inner, .post:focus .post-hover .post-hover-inner { visibility: visible; opacity: 1; -webkit-animation-delay: 10s; animation-delay: 10s; }
 
 .project:hover .project-hover .project-hover-inner h2, .project:hover .project-hover .post-hover-inner h2, .project:hover .post-hover .project-hover-inner h2, .project:hover .post-hover .post-hover-inner h2, .project:focus .project-hover .project-hover-inner h2, .project:focus .project-hover .post-hover-inner h2, .project:focus .post-hover .project-hover-inner h2, .project:focus .post-hover .post-hover-inner h2, .post:hover .project-hover .project-hover-inner h2, .post:hover .project-hover .post-hover-inner h2, .post:hover .post-hover .project-hover-inner h2, .post:hover .post-hover .post-hover-inner h2, .post:focus .project-hover .project-hover-inner h2, .post:focus .project-hover .post-hover-inner h2, .post:focus .post-hover .project-hover-inner h2, .post:focus .post-hover .post-hover-inner h2 { opacity: 1; visibility: visible; bottom: 0px; }
+.project:hover .project-hover .project-hover-inner p, .project:hover .project-hover .post-hover-inner p, .project:hover .post-hover .project-hover-inner p, .project:hover .post-hover .post-hover-inner p, .project:focus .project-hover .project-hover-inner p, .project:focus .project-hover .post-hover-inner p, .project:focus .post-hover .project-hover-inner p, .project:focus .post-hover .post-hover-inner p, .post:hover .project-hover .project-hover-inner p, .post:hover .project-hover .post-hover-inner p, .post:hover .post-hover .project-hover-inner p, .post:hover .post-hover .post-hover-inner p, .post:focus .project-hover .project-hover-inner p, .post:focus .project-hover .post-hover-inner p, .post:focus .post-hover .project-hover-inner p, .post:focus .post-hover .post-hover-inner p { opacity: 1; visibility: visible; bottom: 0px; }
 
 .project:hover .project-hover .project-hover-inner span, .project:hover .project-hover .post-hover-inner span, .project:hover .post-hover .project-hover-inner span, .project:hover .post-hover .post-hover-inner span, .project:focus .project-hover .project-hover-inner span, .project:focus .project-hover .post-hover-inner span, .project:focus .post-hover .project-hover-inner span, .project:focus .post-hover .post-hover-inner span, .post:hover .project-hover .project-hover-inner span, .post:hover .project-hover .post-hover-inner span, .post:hover .post-hover .project-hover-inner span, .post:hover .post-hover .post-hover-inner span, .post:focus .project-hover .project-hover-inner span, .post:focus .project-hover .post-hover-inner span, .post:focus .post-hover .project-hover-inner span, .post:focus .post-hover .post-hover-inner span { bottom: 0; visibility: visible; opacity: 1; }
 
@@ -188,6 +191,8 @@ section { height: 100vh; }
 .templateux-footer p:last-child { margin-bottom: 0; }
 
 .templateux-footer p {font-size: 14px; text-align: center; color: #7f868bb0}
+
+.templateux-footer .footer-social img {max-width: 55px; max-height: 55px; margin-top: -10px}
 
 .templateux-footer .footer-social { position: relative; text-align: center;}
 
