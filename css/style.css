@@ -123,10 +123,14 @@ section { height: 100vh;}
 
 @media (max-width: 991.98px) { .templateux-section { padding: 3em 0;} }
 
-.templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 60px;}
 .templateux-section h2 { line-height: 1.5; font-family: 'Signika', sans-serif; font-weight: 500; font-size: 45px;}
-.templateux-section p {line-height: 1.75; font-size: 19px; font-family: 'Roboto', sans-serif; font-weight: 200; margin-right: 5%; padding-top: 5px; padding-bottom: 5px;}
-.templateux-section .work p {margin-bottom:-60px; text-align: center; font-size: 16px;}
+.templateux-section p {line-height: 1.75; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 200; margin-right: 5%; padding-top: 5px; padding-bottom: 5px;}
+.templateux-section .work h2 {margin-left: -42px; font-size: 55px; text-align: center}
+.templateux-section .work p {text-align: center; color: #454546}
+.templateux-section .work2 p {margin-bottom:-60px; text-align: center; font-size: 16px; padding-left: 17px; padding-right: 2px;}
+.templateux-section .work3 p {font-size: 18px; margin-top:-20px; white-space: nowrap; font-weight: 400px;}
+.templateux-section .work4 {align-self: right; text-align: right;}
+.templateux-section .work4 p {margin-right:0px;}
 
 .templateux-section .social { position: relative; text-align: center; padding-left: -100px; margin-right: 5%}
 .templateux-section .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
@@ -182,6 +186,7 @@ section { height: 100vh;}
 
 @media (max-width: 320px) {.space {padding: 3px;}}
 .space {padding: 52px}
+.space2 {padding: 700px}
 @media (min-width: 992px) and (max-width: 1025px) { .templateux-footer { margin-bottom: -500px; } }
 .templateux-footer { padding: 4em 0; border-top: 2px solid #F4F4F4; margin-top: -100px; background-color: white;}
 
