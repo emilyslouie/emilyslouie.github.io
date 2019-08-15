@@ -25,7 +25,7 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 .templateux-navbar .site-logo a { margin-left: 15px; font-size: 28px; color: #000; font-family: 'Signika', sans-serif; font-weight: 500;}
 .templateux-navbar img {max-width: 40px; max-height: 40px; margin-top: -12px; margin-left: -3px;}
 .templateux-navbar u, .site-logo u {text-decoration: underline; text-decoration-color:#9f314e;}
-templateux-navbar .templateux-menu { position: relative; }
+.templateux-navbar .templateux-menu { position: relative; }
 
 .templateux-navbar .templateux-menu ul { margin-bottom: 0; }
 
@@ -131,6 +131,16 @@ section { height: 100vh;}
 .templateux-section .work3 p {font-size: 18px; margin-top:-20px; white-space: nowrap; font-weight: 400px;}
 .templateux-section .work4 {align-self: right; text-align: right;}
 .templateux-section .work4 p {margin-right:0px;}
+.templateux-section iframe { width:560px; height:315px;}
+
+@media (max-width: 440px) { .templateux-section .work h2 {margin-left: 0px;}
+@media (max-width: 440px) { .templateux-section iframe {width: 100px; height: 50px;}
+@media (max-width: 800px) { .templateux-section iframe {width: 420px; height: 250px;}}
+@media (max-width: 1200px) { .templateux-section .work3 p {white-space: normal;}}
+@media (max-width: 1200px) { .templateux-section .work5 p {padding-left: 0px;}}
+@media (max-width: 1200px) { .templateux-section p {font-size: 16px; padding-left: 20px;}}
+@media (max-width: 1200px) { .templateux-section h2 {font-size: 32px;}}
+@media (max-width: 1200px) { .templateux-section iframe {padding-right: 20px;}}
 
 .templateux-section .social { position: relative; text-align: center; padding-left: -100px; margin-right: 5%}
 .templateux-section .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
