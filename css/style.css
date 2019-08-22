@@ -56,6 +56,11 @@ templateux-navbar .templateux-menu { position: relative; }
 
 .templateux-navbar.navbar-light .templateux-menu ul li a { color: #fff; }
 
+.templateux-navbar .social { position: relative; text-align: left; margin-right: 5%; margin-top: -5px;}
+.templateux-navbar .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
+.templateux-navbar .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
+.templateux-navbar .social a:hover, .templateux-navbar .social a:focus { color: #9f314e; -webkit-transform: scale(1.7); -ms-transform: scale(1.7); transform: scale(1.7); }
+
 .menu-open .templateux-navbar { position: fixed; left: 0; top: 0; }
 
 @media (max-width: 767.98px) { .menu-open .site-logo a { color: #000 !important; } }
@@ -108,7 +113,7 @@ section { height: 100vh;}
 
 .templateux-portfolio-overlap h3 { color: rgb(85, 85, 85); font-size: 22px; }
 
-.templateux-portfolio-overlap p { font-family: 'Roboto', sans-serif; font-size: 20px; color: rgb(85, 85, 85); font-size: 12px; }
+.templateux-portfolio-overlap p { font-family: 'Roboto', sans-serif; font-size: 20px; color: rgb(85, 85, 85); font-size: 12px; margin-left:-25px; margin-right: -25px;}
 @media (min-width: 392px) and (max-width: 420px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: 0px; padding-bottom: 1900px} }
 @media (min-width: 421px) and (max-width: 991.98px) { .templateux-portfolio-overlap { margin-top: 0px; padding-bottom: 1200px} }
 @media (min-width: 992px) and (max-width: 1025px) { .templateux-portfolio-overlap { margin-top: 0px; margin-bottom: -500px; } }
@@ -156,7 +161,7 @@ section { height: 100vh;}
 
 .templateux-cta:hover .words-1, .templateux-cta:focus .words-1 { opacity: 0; visibility: hidden; top: -40px; }
 
-.templateux-cta:hover .words-2, .templateux-cta:focus .words-2 { opacity: 1; visibility: visible; top: 0px; color: #fff; }
+.templateux-ctao:hover .words-2, .templateux-cta:focus .words-2 { opacity: 1; visibility: visible; top: 0px; color: #fff; }
 
 .section-heading { font-size: 14px; color: #495057; margin-bottom: 30px; display: block; position: relative; }
 
@@ -171,8 +176,7 @@ section { height: 100vh;}
 .project .project-hover .project-hover-inner, .project .project-hover .post-hover-inner, .project .post-hover .project-hover-inner, .project .post-hover .post-hover-inner, .post .project-hover .project-hover-inner, .post .project-hover .post-hover-inner, .post .post-hover .project-hover-inner, .post .post-hover .post-hover-inner { position: absolute; z-index: 99; left: 50%; top: 50%; visibility: hidden; opacity: 0; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); transition: .3s all ease; text-align: center; }
 
 .project .project-hover .project-hover-inner h2, .project .project-hover .post-hover-inner h2, .project .post-hover .project-hover-inner h2, .project .post-hover .post-hover-inner h2, .post .project-hover .project-hover-inner h2, .post .project-hover .post-hover-inner h2, .post .post-hover .project-hover-inner h2, .post .post-hover .post-hover-inner h2 { font-family: 'Signika', sans-serif; color: #fff; font-size: 46px; line-height: 1.2; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; opacity: 0; visibility: hidden; position: relative; bottom: -30px; }
-.project .project-hover .project-hover-inner p, .project .project-hover .post-hover-inner p, .project .post-hover .project-hover-inner p, .project .post-hover .post-hover-inner p, .post .project-hover .project-hover-inner p, .post .project-hover .post-hover-inner p, .post .post-hover .project-hover-inner p, .post .post-hover .post-hover-inner p { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 21px; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
-
+.project .project-hover .project-hover-inner p, .project .project-hover .post-hover-inner p, .project .post-hover .project-hover-inner p, .project .post-hover .post-hover-inner p, .post .project-hover .project-hover-inner p, .post .project-hover .post-hover-inner p, .post .post-hover .project-hover-inner p, .post .post-hover .post-hover-inner p { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 17px; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 .project .project-hover .project-hover-inner span, .project .project-hover .post-hover-inner span, .project .post-hover .project-hover-inner span, .project .post-hover .post-hover-inner span, .post .project-hover .project-hover-inner span, .post .project-hover .post-hover-inner span, .post .post-hover .project-hover-inner span, .post .post-hover .post-hover-inner span { border: 1px solid white; border-radius: 8px; padding: 7px; font-family: 'Roboto', sans-serif; font-weight: 200; color: rgba(255, 255, 255, 0.916); opacity: 0; visibility: hidden; position: relative; bottom: -30px; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 
 .project:hover .project-hover, .project:hover .post-hover, .project:focus .project-hover, .project:focus .post-hover, .post:hover .project-hover, .post:hover .post-hover, .post:focus .project-hover, .post:focus .post-hover { visibility: visible; opacity: 1; }
