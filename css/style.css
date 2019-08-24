@@ -137,6 +137,10 @@ section { height: 100vh;}
 .templateux-section .work4 {align-self: right; text-align: right;}
 .templateux-section .work4 p {margin-right:0px;}
 
+.templateux-section .work-detail { text-align: center; margin-top: 50px; margin-bottom: 5px; margin-left: -20px;}
+.templateux-section .work-detail .caption { font-family: 'Roboto', sans-serif; font-size: 30px; display: block; text-transform: uppercase; color: #ccc; }
+.templateux-section .work-detail strong { font-weight: 500; color: #000; }
+
 .templateux-section .social { position: relative; text-align: center; padding-left: -100px; margin-right: 5%}
 .templateux-section .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
 .templateux-section .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
