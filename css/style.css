@@ -56,7 +56,7 @@ templateux-navbar .templateux-menu { position: relative; }
 
 .templateux-navbar.navbar-light .templateux-menu ul li a { color: #fff; }
 
-.templateux-navbar .social { position: relative; text-align: left; margin-right: 5%; margin-top: -5px;}
+.templateux-navbar .social { position: relative; text-align: left; margin-left: -5%; margin-right: 5%; margin-top: -5px;}
 .templateux-navbar .social img {max-width: 52px; max-height: 52px; margin-top: -10px}
 .templateux-navbar .social a { color: #b3b3b3; position: relative; -webkit-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; font-size: 36px; }
 .templateux-navbar .social a:hover, .templateux-navbar .social a:focus { color: #9f314e; -webkit-transform: scale(1.7); -ms-transform: scale(1.7); transform: scale(1.7); }
