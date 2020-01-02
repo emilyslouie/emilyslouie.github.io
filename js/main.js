@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
 
     }
 
-  	if ( $('.templateux-menu').is(':visible') ) {
+  	if ( $('.menu').is(':visible') ) {
   		$('.js-templateux-menu').fadeOut(300);
   	} else {
   		$('.js-templateux-menu').fadeIn(300);
