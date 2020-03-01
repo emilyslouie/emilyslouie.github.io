@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700|Source+Sans+Pro:400,400i,600,700&display=swap');
+@import url('<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap>');
 
 ::selection { background: rgba(255, 229, 235, 0.849); }
 
@@ -17,18 +17,19 @@ body {
     font-family: "Roboto", sans-serif;
     color:black;
     background-color: #FFFFFF;
+    overflow-x: hidden;
 }
 
 .landing-container {
     display: flex;
     flex-direction: column;
     width:100vw;
-    height: 100vh;
+    height: 65vh;
     color: black;
     /* padding: 15% 15% 15% 20%; */
-    padding-left: 15%;
-    padding-right: 15%;
-    align-items: center;
+    padding: 10%;
+    padding-top: 20%;
+    align-items: middle;
     justify-content: center;
     letter-spacing: 0.02em;
 }
@@ -38,7 +39,7 @@ body {
         display: flex;
         flex-direction: column;
         width:100vw;
-        height: 100vh;
+        height: 65vh;
         color: black;
         padding-top: 35%;
         padding-left: 7%;
@@ -46,6 +47,21 @@ body {
         padding-bottom: 20%;
     }
 }
+
+@media only screen and (max-width: 414px) {
+    .landing-container {
+        display: flex;
+        flex-direction: column;
+        width:100vw;
+        height: 90vh;
+        color: black;
+        padding-top: 90%;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-bottom: 60%;
+    }
+}
+
 
 .landing-container h1 {
     font-size: 3.6em;
@@ -55,6 +71,12 @@ body {
     color: #252525;
   
 } 
+
+.landing-container .middle {
+    max-width: 1135px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .landing-container .highlight {
     background-color: #FFEDF1;
@@ -67,6 +89,11 @@ body {
     font-weight: 400;
     color: #333333;
 } 
+
+.landing-container h2 a {
+    pointer-events: none;
+   cursor: default;
+}
 
 .landing-container a {
     color: #3b3b3b;
@@ -109,10 +136,33 @@ body {
     margin-bottom: 1.5%;
 }
 
+@media only screen and (max-width: 767.98px) {
+    .landing-container h1 {
+        font-size: 2.5em;
+    }
+
+    .landing-container h2 {
+        font-size: 1.5em;
+    }
+
+    .landing-container p {
+        font-size: 1em;
+    }
+
+    .landing-container .social a {
+        font-size: 1.75em;
+    }
+
+    .landing-container img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+}
+
 .navbar {
     position: fixed;
     background-color: #FFFFFF;
-    z-index: 99999;
+    z-index: 9999;
     height: 4em;
     width: 100%;
     letter-spacing: 0.02em;
@@ -124,13 +174,15 @@ body {
 
 .navbar .site-logo {
     position: relative;
-    z-index: 99999;
+    z-index: 9999;
     padding: 2px;
+    margin-top: -5px;
 }
 
 .navbar .site-logo a {
     font-size: 2.2em;
     color: #9b9b9b;
+    
 }
 
 .navbar .site-logo a:hover, a:focus{
@@ -152,13 +204,14 @@ body {
 
 .navbar .menu ul li {
     display: inline-block;
+    margin-top: -6px;
 }
 
 .navbar .menu ul li a {
     font-size: 1.2em;
     display: block;
     color: #3b3b3b;
-    font-weight: 300;
+    font-weight: 400;
     margin-right: 20px;
     position: relative;
     padding-top: 5px;
@@ -284,7 +337,6 @@ body {
     display: flex;
     flex-direction: column;
     width:100vw;
-    height: 100vh;
     color: black;
     padding: 7%;
     padding-top: 10%;
@@ -297,12 +349,25 @@ body {
         display: flex;
         flex-direction: column;
         width:100vw;
-        height: 100vh;
         color: black;
         padding-top: 35%;
         padding-left: 7%;
         padding-right: 7%;
         padding-bottom: 20%;
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        width:100vw;
+        color: black;
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 0%;
         overflow: auto;
     }
 }
@@ -366,7 +431,61 @@ body {
 }
 
 .about-container img {
-    margin-left: 20%;
+
+}
+
+.about-container figcaption {
+    padding: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: #5a5a5a;
+    font-style: italic;
+}
+
+.about-container .resume {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.about-container .resume a {
+    font-size: 1.5em;
+    color: #3b3b3b;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.about-container .resume a:before { 
+    content: ""; 
+    position: absolute; 
+    bottom: 0; 
+    height: 2px; 
+    width: 0; 
+    left: 0; 
+    background: #9f314e; 
+    -webkit-transition: .15s width ease; 
+    -o-transition: .15s width ease;
+    transition: .15s width ease; 
+}
+
+.about-container .resume a:focus {
+    -webkit-transform: scale(1); 
+    -ms-transform: scale(1); 
+    transform: scale(1);
+}
+
+.about-container .resume a:hover:before { 
+    width: 100%; 
+}
+
+.about-container .resume .active > a:before { 
+    width: 100%; 
+}
+
+.about-container h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -384,8 +503,8 @@ body {
 }
 
 .footer-container {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     width:100vw;
     height: 12%;
     color: #9b9b9b;
@@ -394,7 +513,8 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    border-top: 1px solid #b8b8b8;
+    /* border-top: 1px solid #b8b8b8; */
+    position: relative;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -415,6 +535,18 @@ body {
     .footer-container p {
         padding-top: 2%;
     }
+}
+
+.footer-container h2 {
+    color: #9b9b9b;
+    font-size: 1.5em;
+    padding-bottom: 8px;
+}
+
+.footer-container h3 {
+    color: #9b9b9b;
+    font-size: 1.2em;
+    padding-bottom: 8px;
 }
 
 .footer-container .social {
@@ -457,10 +589,10 @@ body {
     width:100%;
     color: rgba(133, 133, 133, 0.774);
     font-weight: 500;
-    font-size: 2.5em;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 1%;
+    font-size: 2em;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
     letter-spacing: 0.02em;
     padding-bottom: 5%;
 }
@@ -514,6 +646,8 @@ body {
         flex: 0 0 50%;
     }
 
+
+
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -523,6 +657,7 @@ body {
     #flip2 {
         order: 2;
     }
+
 }
 
 .work-container .project .image img {
@@ -531,20 +666,34 @@ body {
 
 .work-container .project .text {
     width: 100%;
-    padding-top: 3%;
+    padding-top: 4%;
     padding-bottom: 3%;
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Roboto', sans-serif;
     height: 325px;
-    align-items: center;
+    align-items: middle;
     justify-content: center;
     line-height: 1;
     letter-spacing: 0.02em;
 }
 
+.thumbnail {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
 .work-container .project .text h3 {
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 500;
     color: #333333;
     padding-bottom: 6%;
@@ -552,9 +701,10 @@ body {
 }
 
 .work-container .project .text p {
-    font-size: 0.5em;
+    font-size: 0.6em;
     font-weight: 400;
     color: #5a5a5a;
+    line-height: 1.5em;
 
 }
 
@@ -564,7 +714,7 @@ body {
 
 .work-container .project .tag {
     display: inline-block;
-    font-size: 0.3em;
+    font-size: 0.4em;
     font-weight: 400;
     color: #333333;
     border-radius: 10px;
@@ -573,6 +723,32 @@ body {
     height: 32px;
     padding: 10px 10px;
     letter-spacing: 0;
+}
+
+
+@media only screen and (max-width: 767.98px) {
+   
+    .work-container .project .text {
+        padding-top: 12%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .work-container .project .text h3 {
+        font-size: 0.7em;
+        
+        }
+    
+    .work-container .project .text p {
+        font-size: 0.5em;
+        line-height: 1.5em;
+            
+    }
+    
+    .work-container .project .tag {
+        font-size: 0.3em;
+            
+    }
 }
 
 .work-container .project:hover {
