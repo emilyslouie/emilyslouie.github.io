@@ -22,6 +22,22 @@ img {
     margin-bottom: 15px;
 }
 
+
+
+.site-name img {
+    max-width: 48px;
+    max-height: 48px;
+    margin-top: -3px;
+    -o-transition: .5s all ease; 
+    transition: .3s all ease;
+}
+
+.site-name img:hover {
+    -webkit-transform: scale(1.2); 
+    -o-transition: .3s all ease; 
+    transition: .3s all ease;
+}
+
 .navbar {
     position: fixed;
     background-color: #FFFFFF;
@@ -78,11 +94,12 @@ img {
 
 .navbar .menu ul {
     margin-bottom: 0;
-    margin-top: -14px;
+    margin-top: -12px;
 }
 
 .navbar .menu ul li {
     display: inline-block;
+    margin-top: -4px;
 }
 
 .navbar .menu ul li a {
@@ -167,20 +184,6 @@ img {
     top: 0; 
 }
 
-.site-name img {
-    max-width: 48px;
-    max-height: 48px;
-    margin-top: -3px;
-    -o-transition: .5s all ease; 
-    transition: .3s all ease;
-}
-
-.site-name img:hover {
-    -webkit-transform: scale(1.2); 
-    -o-transition: .3s all ease; 
-    transition: .3s all ease;
-}
-
 .menu-open .navbar li {
     opacity: 0;
     visibility: hidden;
@@ -201,6 +204,7 @@ img {
     position: relative; 
     top: 0px; 
     display: none;
+    margin-right: -22px;
 }
 
 @media only screen and (max-width: 767.98px) { 
