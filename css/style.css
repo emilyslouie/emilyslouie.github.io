@@ -744,7 +744,6 @@ pointer-events: none;
     left: 0;
     right: 0;
     margin: auto;
-    
 
 }
 
@@ -752,7 +751,7 @@ pointer-events: none;
     font-size: 0.8em;
     font-weight: 500;
     color: #333333;
-    padding-bottom: 6%;
+    margin-bottom: 0;
     line-height: 1.4em;
 }
 
@@ -806,11 +805,6 @@ pointer-events: none;
     .work-container .project .tag {
         font-size: 0.4em;
             
-    }
-
-    .work-container .work-row .gallery {
-        height: 25px;
-        
     }
 
     .work-container .work-row .spacer{
@@ -880,7 +874,7 @@ pointer-events: none;
     transition: .3s all ease;
 }
 
-.work-container .work-row .words .tags {
+/* .work-container .work-row .words .tags {
     display: inline-block;
     font-size: 0.4em;
     font-weight: 400;
@@ -894,7 +888,7 @@ pointer-events: none;
     justify-content: center;
     cursor: default;
     margin-bottom: 8%;
-}
+} */
 
 
 
