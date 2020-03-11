@@ -8,6 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="js/TxtType.js"></script>
+  <script src="js/toTop.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animsition.min.css">
@@ -16,7 +17,7 @@
   <link rel="stylesheet" href="css/aos.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="shortcut icon" href="images/me2 2.png">
+  <link rel="shortcut icon" href="images/logo.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,8 +25,8 @@
 
 <header class="navbar" data-aos="fade-down">
   <div class="container-fluid">
-    <div class="site-logo">
-      <a href="https://emily.louie.ca" title="Home"><span class="fa fa-home"></span></a>
+    <div class="site-name">
+      <a href="https://emily.louie.ca" title="Home"><img src="images/logo.png"> </img></a>
     </div>
     <div class="text-right">
         <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
@@ -35,6 +36,7 @@
         </button> 
         <nav class="menu js-templateux-menu" role="navigation">
           <ul class="list-unstyled">
+              <li><a href="#portfolio" class="js-smoothscroll">portfolio</a></li>
               <li><a href="about.html" class="animsition-link">about</a></li>
               <li><a href="EmilyLouieResume.pdf" target="_blank" >résumé</a></li>
           </ul>
@@ -53,13 +55,9 @@
         </a>
       </h2>
      <p>
-        I'm a Systems Design Engineering student at the University of Waterloo, and I'm passionate about using tech to design products that empower others!
-     </p>
-     <p>
-        Product design intern at Ontario Digital Services; previously interned at Microsoft.
+        Systems Design Engineering student at the University of Waterloo. <br> Product design intern at <a class="link" href="https://www.ontario.ca/page/ontario-digital-service" target="_blank"><strong>Ontario Digital Services</strong></a>; previously interned at <a class="link" href="https://medium.com/@emilyslouie/3-things-i-learned-at-microsoft-2f40bdf93c9b?source=friends_link&sk=956bb70116ad0a2412161a686b307893" target="_blank"><strong>Microsoft</strong></a>.
      </p>
      <div class='social'>
-        <a href="EmilyLouieResume.pdf" target="_blank" class="p-3"><span class="fa fa-file-text"></span></a>
         <a href="mailto:emilyslouie@gmail.com" target="_blank" class="p-3"><span class="fa fa-envelope"></span></a>
         <a href="https://www.linkedin.com/in/emilyslouie/" target="_blank" class="p-3"><span class="fa fa-linkedin"></span></a>
         <a href="https://github.com/emilyslouie" class="p-3" target="_blank"><span class="fa fa-github"></span></a>
@@ -70,22 +68,42 @@
   </div>
 </section>
 
-<section class="work-container" id="experience">
+<section class="work-container" id="portfolio">
   <div class="container">
-    
-  <div onclick="location.href='microsoft.html';"  class="project row animsition-link" data-aos="fade-up">
-      <div class="col-md-6 text" id="flip2">
-        <h3>Rethinking how Microsoft employees request and manage marketing assets</h3>
-        <p>Microsoft</p>
-        <div class="tag">User Research</div>
-        <div class="tag">UX/UI</div>
-        <div class="tag">Frontend Development</div>
-      </div>
-      <div class="col-md-6 image" style="background-color: #f0eafdff;" id="flip1">
-        <img class="thumbnail" src="images/thumbnail-microsoft.png"> 
-      </div>
+    <div class="row work-row">
+      <div class="col-md-6" data-aos="fade-up">
+        <a href="microsoft.html">
+          <div class="gallery" style="background-color: #f0eafdff;">
+            <img class="thumbnail" src="images/thumbnail-microsoft.png"> 
+          </div>
+          <div class="spacer"></div>
+          <div class="words">
+              <h2>Microsoft</h2>
+              <p>Rethinking how Microsoft employees request and manage marketing assets</p>
+              <!-- <p class="tags">ux/ui</p>
+              <p class="tags">user research</p>
+              <p class="tags">frontend development</p> -->
+          </div>
+        </a>
+      </div> 
+      <div class="col-md-6" data-aos="fade-up">
+        <a href="microsoft.html">
+          <div class="gallery" style="background-color: #f0eafdff;">
+            <img class="thumbnail" src="images/thumbnail-microsoft.png"> 
+          </div>
+          <div class="spacer"></div>
+          <div class="words">
+              <h2>Microsoft</h2>
+              <p>Rethinking how Microsoft employees request and manage marketing assets</p>
+              <!-- <p class="tags">ux/ui</p>
+              <p class="tags">user research</p>
+              <p class="tags">frontend development</p> -->
+          </div>
+        </a>
+      </div> 
     </div>
-    
+      
+
   </div>
 </section>
 
