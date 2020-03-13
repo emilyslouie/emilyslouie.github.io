@@ -890,5 +890,11 @@ pointer-events: none;
     margin-bottom: 8%;
 } */
 
-
-
+.work-container .work-row .words .type {
+    font-style: italic;
+    text-transform: lowercase;
+    color: #919191;
+    font-size: 0.45em;
+    margin-top: -8px;
+    margin-bottom: -5px;
+}
