@@ -110,7 +110,7 @@ body {
 
 .landing-container h2 a {
 pointer-events: none;
-   cursor: default;
+   cursor: text;
 }
 
 .landing-container a {
@@ -839,22 +839,23 @@ pointer-events: none;
 .work-container .work-row .words h2{
     font-size: 0.8em;
     color: #202020;
-    cursor: pointer;
+    cursor: text;
 
 }
 
 .work-container .work-row .words h2:hover{
     /* color:#9f314e; */
-    cursor: pointer;
+    cursor: text;
 
 }
 
 .work-container .work-row .words p{
+
     font-size: 0.45em;
     font-weight: 300;
     color: #202020;
     letter-spacing: normal;
-    cursor: default;
+    cursor: text;
 
 }
 
