@@ -844,7 +844,7 @@ pointer-events: none;
 
 .work-container .work-row .words h2:hover{
     /* color:#9f314e; */
-    cursor: pointer;
+    cursor: default;
 
 }
 
