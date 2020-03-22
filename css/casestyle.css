@@ -381,6 +381,7 @@ img {
     margin-bottom: 1em;
 }
 
+
 ol li {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -397,7 +398,7 @@ ol p{
     flex-direction: column; */
     width:100vw;
     height: 12%;
-    color: #9b9b9b;
+    color: #5c5c5c;
     padding-bottom: 2%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -427,13 +428,13 @@ ol p{
 }
 
 .footer-container h2 {
-    color: #9b9b9b;
+    color: #5c5c5c;
     font-size: 1.5em;
     padding-bottom: 8px;
 }
 
 .footer-container h3 {
-    color: #9b9b9b;
+    color: #5c5c5c;
     font-size: 1.2em;
     padding-bottom: 8px;
 }
@@ -515,6 +516,16 @@ ol p{
     ol p{
         padding-right: 0px;;
     }
+    .gif {
+        align-items: center;
+        text-align: center;
+        max-height: 100%;
+        height: 250px;
+    }
+
+    .quote {
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (max-width: 414px) {
@@ -528,4 +539,46 @@ ol p{
         padding-right: 7%;
         padding-bottom: 60%;
     }
+}
+
+iframe {
+    border: none;
+    max-height: 100%;
+    max-width: 100%;
+    width: 800px;
+    height: 450px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.gif {
+    align-items: center;
+    text-align: center;
+    height: 210px;
+
+}
+
+.quote {
+    max-width: 800px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-style: italic;
+    color: #9f314e;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-bottom: 3.5%;
+}
+
+figcaption {
+    padding: 5px;
+    text-align: center;
+    font-size: 1em;
+    color: #5a5a5a;
+    font-style: italic;
 }
