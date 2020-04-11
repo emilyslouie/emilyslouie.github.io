@@ -8,7 +8,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="js/scroll.js"></script>
-  <script src="js/button.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animsition.min.css">
@@ -266,6 +265,9 @@
 <script src="js/yall.min.js"></script>
 
 <script>
+  document.addEventListener("DOMContentLoaded", yall);
+</script>
+<script>
   // When the user scrolls the page, execute myFunction 
   window.onscroll = function() {myFunction()};
   
@@ -275,7 +277,6 @@
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
   }
-  document.addEventListener("DOMContentLoaded", yall);
 </script>
 
 
