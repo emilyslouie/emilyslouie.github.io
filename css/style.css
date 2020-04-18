@@ -1,4 +1,5 @@
-@import url('<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap>');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 ::selection { background: rgba(255, 229, 235, 0.849); }
 
@@ -28,7 +29,7 @@ a:hover, a:active, a:focus {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color:black;
     background-color: #FFFFFF;
     overflow-x: hidden;
@@ -84,7 +85,7 @@ body {
     font-size: 3.8em;
     margin-bottom: 0.3em;
     text-align: left;
-    font-weight: 600;
+    font-weight: 700;
     color: #252525;
     letter-spacing: 4px;
   
@@ -104,7 +105,7 @@ body {
     font-size: 1.8em;
     margin-bottom: 0.8em;
     text-align: left;
-    font-weight: 400;
+    font-weight: 600;
     color: #333333;
 } 
 
@@ -123,17 +124,17 @@ pointer-events: none;
 } 
 
 .landing-container p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
-    font-weight: 200;
-    color: #616161;
+    font-weight: 300;
+    color: #444444;
     margin-bottom: 1em;
 }
 
 .landing-container .link {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    color: #616161;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #444444;
     margin-bottom: 1em;
 }
 
@@ -227,7 +228,7 @@ pointer-events: none;
 }
 
 .navbar .site-name a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
     color: #252525;
     font-weight: 400;
@@ -258,7 +259,7 @@ pointer-events: none;
 .navbar .menu ul li a {
     font-size: 1.2em;
     display: block;
-    color: #3b3b3b;
+    color: #444444;
     font-weight: 400;
     margin-right: 20px;
     position: relative;
@@ -429,13 +430,13 @@ pointer-events: none;
     font-size: 2.8em;
     margin-bottom: 0.7em;
     text-align: left;
-    font-weight: 500;
+    font-weight: 700;
     color: #202020;
   
 } 
 
 .about-container a {
-    color: #3b3b3b;
+    color: #444444;
 }
 
 .about-container a:hover, a:active, a:focus { 
@@ -444,9 +445,9 @@ pointer-events: none;
 } 
 
 .about-container p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
-    font-weight: 200;
+    font-weight: 300;
     color: rgb(85, 85, 85);
     margin-bottom: 1.0em;
 }
@@ -494,12 +495,12 @@ pointer-events: none;
 .about-container .resume {
     padding-top: 15px;
     padding-left: 15px;
-    color: #3b3b3b;
+    color:#444444;
 }
 
 .about-container .resume a {
     font-size: 1.5em;
-    color: #3b3b3b;
+    color: ##444444;
     font-weight: 400;
     position: relative;
     padding-bottom: 5px;
@@ -533,12 +534,6 @@ pointer-events: none;
     width: 100%; 
 }
 
-.about-container h3 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-weight: 500;
-    color: #3b3b3b;
-}
 
 @media only screen and (max-width: 767.98px) {
     .about-container img {
@@ -559,11 +554,11 @@ pointer-events: none;
     flex-direction: column; */
     width:100vw;
     height: 12%;
-    color: #5c5c5c;
+    color: #9b9b9b;
     padding-top: 3%;
     padding-bottom: 2%;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     /* border-top: 1px solid #b8b8b8; */
     position: relative;
@@ -590,13 +585,13 @@ pointer-events: none;
 }
 
 .footer-container h2 {
-    color: #5c5c5c;
+    color: #9b9b9b;
     font-size: 1.5em;
     padding-bottom: 8px;
 }
 
 .footer-container h3 {
-    color: #5c5c5c;
+    color: #9b9b9b;
     font-size: 1.2em;
     padding-bottom: 8px;
 }
@@ -741,13 +736,14 @@ pointer-events: none;
 .work-container .work-row .words h2{
     font-size: 0.8em;
     color: #202020;
-    cursor: text;
+    cursor: pointer;
+    font-weight: 600;
 
 }
 
 .work-container .work-row .words h2:hover{
-    /* color:#9f314e; */
-    cursor: text;
+    color:#9f314e;
+    cursor: pointer;
 
 }
 
@@ -776,7 +772,7 @@ pointer-events: none;
 
 
 .work-container .work-row .words .type {
-    font-weight: 400;
+    font-weight: 500;
     text-transform: lowercase;
     color: #4b4b4b;
     font-size: 0.45em;

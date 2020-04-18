@@ -73,7 +73,7 @@ img {
 }
 
 .navbar .site-name a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
     color: #252525;
     font-weight: 400;
@@ -306,7 +306,7 @@ img {
 }
 
 .details{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
     font-weight: 200;
     color: #616161;
@@ -318,8 +318,9 @@ img {
 }
 
 .paragraph {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 200;
+    font-size: 1.2em;
 }
 
 .details .bolder {
@@ -339,7 +340,7 @@ img {
 }
 
 .how-might-we {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
     font-style: italic;
     color: #242424;
@@ -371,7 +372,7 @@ img {
 }
 
 .disclosure {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
     font-weight: 500;
     color: #333333;
@@ -383,7 +384,7 @@ img {
 
 
 ol li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.3em;
     color: #242424
@@ -398,10 +399,10 @@ ol p{
     flex-direction: column; */
     width:100vw;
     height: 12%;
-    color: #5c5c5c;
+    color:  #9b9b9b;
     padding-bottom: 2%;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     /* border-top: 1px solid #b8b8b8; */
     position: relative;
@@ -428,13 +429,13 @@ ol p{
 }
 
 .footer-container h2 {
-    color: #5c5c5c;
+    color:  #9b9b9b;
     font-size: 1.5em;
     padding-bottom: 8px;
 }
 
 .footer-container h3 {
-    color: #5c5c5c;
+    color:  #9b9b9b;
     font-size: 1.2em;
     padding-bottom: 8px;
 }
@@ -502,7 +503,7 @@ ol p{
     }
 
     .how-might-we {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 1.1em;
         font-style: italic;
         color: #242424;
