@@ -2,6 +2,11 @@
 
 ::selection { background: rgba(255, 229, 235, 0.849); }
 
+a:hover, a:active, a:focus { 
+    text-decoration: none; 
+    outline: none; 
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -275,6 +280,10 @@ img {
 
 .highlight {
     background-color: #FFEDF1;
+}
+
+.link:hover{
+    text-decoration: underline;
 }
 
 .top-container {
