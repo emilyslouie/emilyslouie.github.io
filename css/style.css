@@ -23,6 +23,7 @@ a:hover, a:active, a:focus {
 }
 
 .site-name img:hover {
+    transform: scale(1.2);
     -webkit-transform: scale(1.2); 
     -o-transition: .3s all ease; 
     transition: .3s all ease;
@@ -87,7 +88,7 @@ body {
     text-align: left;
     font-weight: 700;
     color: #252525;
-    letter-spacing: 4px;
+    letter-spacing: 1.5px;
   
 } 
 
@@ -107,6 +108,8 @@ body {
     text-align: left;
     font-weight: 600;
     color: #333333;
+
+   cursor: text;
 } 
 
 .landing-container h2 a {
@@ -480,10 +483,6 @@ pointer-events: none;
     margin-bottom: 1.5%;
 }
 
-.about-container img {
-
-}
-
 .about-container figcaption {
     padding: 5px;
     text-align: center;
@@ -500,7 +499,7 @@ pointer-events: none;
 
 .about-container .resume a {
     font-size: 1.5em;
-    color: ##444444;
+    color: #444444;
     font-weight: 400;
     position: relative;
     padding-bottom: 5px;
@@ -722,12 +721,14 @@ pointer-events: none;
 
 
 .work-container .work-row .gallery {
+    transform: scale(1.0);
     -webkit-transform: scale(1.0); 
     -o-transition: .3s all ease; 
     transition: .3s all ease;
 }
 
 .work-container .work-row .gallery:hover {
+    transform: scale(1.03);
     -webkit-transform: scale(1.03); 
     -o-transition: .3s all ease; 
     transition: .3s all ease;

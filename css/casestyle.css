@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+::selection { background: rgba(255, 229, 235, 0.849); }
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-}
-
-a:hover {
-    text-decoration: none;
 }
 
 figure {
@@ -22,7 +22,13 @@ img {
     margin-bottom: 15px;
 }
 
+.spacer {
+    padding: 15px;
+}
 
+.spacers {
+    padding: 30px;
+}
 
 .site-name img {
     max-width: 48px;
@@ -33,6 +39,7 @@ img {
 }
 
 .site-name img:hover {
+    transform: scale(1.2);
     -webkit-transform: scale(1.2); 
     -o-transition: .3s all ease; 
     transition: .3s all ease;
@@ -354,8 +361,7 @@ img {
 }
 
 .big {
-    margin-top: 1.2em;
-    font-size: 2.2em;
+    font-size: 2.0em;
     font-weight: 700;
     color: #333333;
     
@@ -365,6 +371,31 @@ img {
     font-size: 1.7em;
     font-weight: 500;
     color: #333333;
+}
+
+.category {
+    font-size: 1.4em;
+    font-weight: 400;
+    font-style: italic;
+    color:  #777777;
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+}
+
+.big-number {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 0;
+    text-indent: 50px;
+}
+
+.text-after-num {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-style: italic;
+    text-indent: 50px;
 }
 
 .space {
@@ -382,12 +413,47 @@ img {
     margin-bottom: 1em;
 }
 
+.nav {
+    line-height: 2.5em;
+}
+
+.case-studies{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #9b9b9b;
+    margin-right: 20px;
+}
+
+.case-studies:hover {
+    color: #9f314e;
+    text-decoration: underline;
+}
+
+.already-here {
+    color: #9f314e;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.already-here:hover {
+    color: #9f314e;
+    text-decoration: none;
+}
 
 ol li {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.3em;
     color: #242424
+}
+
+.list ol li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #000000;
 }
 
 ol p{
@@ -485,6 +551,15 @@ ol p{
         padding-bottom: 20%;
     }
 
+    .big {
+        line-height: 1.15;
+        font-size: 1.7em;
+    }
+
+    .category {
+        font-size: 1.2em;
+    }
+
     .title h1 {
         font-size: 1.9em;
         font-weight: 700;
@@ -502,6 +577,16 @@ ol p{
         font-size: 0.9em;
     }
 
+    .big-number {
+        font-size: 1.8em;
+        text-indent: 20px;
+    }
+
+    .text-after-num {
+        font-size: 1em;
+        text-indent: 20px;
+    }
+
     .how-might-we {
         font-family: 'Open Sans', sans-serif;
         font-size: 1.1em;
@@ -509,6 +594,17 @@ ol p{
         color: #242424;
         font-weight: 300;
         text-align: center;
+    }
+
+    .case-studies {
+        font-size: 1.2em;
+    }
+    .already-here {
+        font-size: 1.2em;
+    }
+
+    .nav {
+        line-height: 2em;
     }
 
     ol li {

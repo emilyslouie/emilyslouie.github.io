@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Emily Louie | Ontario COVID-19</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emily Louie is a designer and developer who prototyped Ontario's COVID-19 website.">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/scroll.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" href="css/aos.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/casestyle.css">
+  <link rel="shortcut icon" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<div class="js-animsition animsition" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
+
+  <header class="navbar" data-aos="fade-down">
+    <div class="container-fluid">
+      <div class="site-name">
+        <a href="https://emily.louie.ca" title="Home"><img src="images/logo.png" alt="My site logo"></a>
+      </div>
+      <div class="text-right">
+          <button class="hamburger hamburger--spin toggle-menu ml-auto js-toggle-menu" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+          </button> 
+          <nav class="menu js-templateux-menu" role="navigation">
+            <ul class="list-unstyled">
+                <li><a href="index.html#portfolio" class="animsition-link">portfolio</a></li>
+                <li><a href="about" class="animsition-link">about</a></li>
+                <li><a href="EmilyLouieResume.pdf" target="_blank" >résumé</a></li>
+            </ul>
+          </nav>
+      </div>
+      <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<section class="top-container" id="top">
+  <div class="container-fluid title" data-aos="fade-up">
+    <h1><span class="highlight">Ontario COVID-19 Website</span></h1>
+    <h2>Empowering Ontarians with the COVID-19 pandemic information</h2>
+    <figure>
+      <img src="images/header-covid.png" alt="COVID-19 header" class="img-fluid header-image">
+    </figure>
+  </div>
+  <div class="max overview">
+    <div class="row container-fluid centre">
+      <div class="col-md-6 centre" data-aos="fade-right">
+        <p class="details"><span class="bolder">Timeline: </span>March - April 2020 (6 week)</p>
+        <p class="details"><span class="bolder">Role: </span>Designer in a team of 6</p> 
+      </div>
+      <div class="col-md-6 centre" data-aos="fade-left">
+        <p class="details"><span class="bolder">Tools: </span>Figma, Balsamiq, React.js</p>
+        <p class="details"><span class="bolder">Skills: </span>UX design, user testing, data visualization</p>
+      </div>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+        <p class="paragraph">During my internship at the Ontario Digital Service as a product designer, the COVID-19 pandemic struck. As part of the prototyping lab, our team was pulled in to tackle the Ontario government’s delivery of information regarding COVID-19, including the visual and content design. The initial engagement was 3 days in a team of 6 designers. Later on, I was on a team of 3 doing usability testing for the live website and reporting research insights.</p>
+        <p class="paragraph"><br>You can visit the most recent version of the website and data visualizations at <a class="link" href="https://covid-19.ontario.ca" target="_blank" rel="noopener"><strong>covid-19.ontario.ca</strong></a>.</p>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+        <p class="category">the problem</p>
+        <div class="space"></div>
+        <p class="big">Ontarians can’t find what they are looking for</p>
+        <p class="paragraph">With the COVID-19 outbreak, there has been information overloading Ontarians from all directions. They have difficulty identifying the important information they should know. This was particularly true on the initial version of Ontario’s COVID-19 site:</p>
+        <div class="col-md-8 centre" data-aos="fade-right">
+            <figure data-aos="fade-up">
+                <img loading="lazy" src="images/problem-covid.png" alt="The problems with the current site" class="img-fluid">
+            </figure>
+        </div>
+        <div class="col-md-4 centre list" data-aos="fade-left">
+            <ol>
+                <li>The page was extremely long. (The image shown isn't even a third of the whole page!)</li>
+                <li>It was densely packed with information; the entire page was text with limited visual elements, making it difficult for Ontarians to find and understand the content they need.</li>
+                <li>The data presented had many technical nuances.</li>
+            </ol> 
+        </div>
+        <p class="paragraph">As the Ontario government, we should ensure that Ontarians are easily finding the information they need during these unprecedented times. Our team recognized the importance of a user-friendly website for Ontarians and set out developing one.</p>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <div class="how-might-we">
+        <br>
+        <p>How might we empower Ontarians with knowledge regarding COVID-19 by streamlining our information and resources in a digestible way?</p>
+        <br>
+      </div>      
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <p class="category">creating a pitchable prototype</p>
+      <div class="space"></div>
+      <p class="big">Designing a one-stop shop for Ontario COVID-19 information</p>
+      <p class="paragraph">Due to the urgency of the situation in early March, we had three days to complete a pitchable MVP. By creating this prototype, we would accomplish:</p>
+      <ol>
+        <li>Convince executives of the need for an informative and easily digestible COVID-19 page for Ontarians.</li>
+        <li>Create a roadmap and first draft for the team that will develop and refine the live website.</li>
+      </ol> 
+      <p class="paragraph">I analyzed the information architecture of the existing COVID-19 page, and sorted the content into two piles – to include or not to include. This is because a lot of the existing content was irrelevant to the typical Ontarian; it was either too technical, or heavily repeated material that made the page difficult to decipher.</p>
+      <div class="spacer"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/cardsorting.png" alt="Card sorting of information" class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">I suggested we develop a multitude of user personas to help us step into the shoes of different Ontarians and comprehend how COVID-19 affects them. By going through this exercise, we found content that was missing on the original site that should be included to help support people during these trying times.</p>
+      <div class="spacer"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/personas-covid.png" alt="Personas that we developed to get a better understanding of audiences we were designing for." class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">We chose to create a branded and dedicated platform for COVID-19 on Ontario.ca. The different user groups of Ontarians allowed for the natural implementation of tabs and groupings throughout the page. This allowed us to target content towards different audiences and what they would want to know. </p>
+      <div class="spacer"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/groupings-covid.png" alt="Groupings and the tabs from before to afterwards." class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">Our lab leader pitched the original prototype and the microsite to executives. Thankfully, our ideas got approved! We handed the project off to another team of developers and designers to build the live site. It was a huge success, we received: </p>
+      <p class="big-number">1.25 million</p>
+      <div class="space"></div>
+      <p class="text-after-num">views one week after launch</p>
+      <div class="spacers"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/iterations-covid.png" alt="Groupings and the tabs from before to afterwards." class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <p class="category">continuing to learn after launch</p>
+      <div class="space"></div>
+      <p class="big">People across Ontario wanted to know more</p>
+      <p class="paragraph">We knew we had to understand how people were perceiving the live website. I had the opportunity to conduct usability testing of the website in a team of three. We tested the live website, and future iterations that the development team was working on at the time. I helped to recruit diverse users from all over Ontario, took notes during interviews, and facilitated over 8 interviews.</p>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/testing-covid.png" alt="User testing script for COVID-19 usability testing" class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">The most prominent and recurring feedback we heard was that Ontarians want to see how the virus is affecting their local area. When asked how to visualize this information, they referred to data visualizations such as heatmaps or interactive charts. </p>
+      <p class="paragraph">Often, this led to users wanting to see other information such as:</p>
+      <p class="quote">“Are we flattening the curve?”</p>
+      <p class="quote">“How many hospital beds are there? Are we close to reaching capacity?”</p>
+      <p class="quote">“What do the future projections look like?”</p>
+      <p class="paragraph">Ontarians wanted to see numbers and figures from a reputable source like the Ontario government. </p>
+      <p class="paragraph">We took our findings back to the team working on the website where they further iterated upon the design and content presented. We got enough feedback regarding the lack of data on the site and started to work on a data visualization page. </p>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <p class="category">prototyping new features</p>
+      <div class="space"></div>
+      <p class="big">Visualizing the essential data in accessible ways</p>
+      <p class="paragraph">Before putting pencil to paper, we looked at a variety of data visualizations currently live, including <a class="link" href="https://coronavirus.data.gov.uk" target="_blank" rel="noopener"><strong>gov.uk</strong></a>, and <a class="link" href="https://www.worldometers.info/coronavirus/country/canada/" target="_blank" rel="noopener"><strong>worldometers.info</strong></a>. In both of these sites, there was common elements that we wanted to showcase in our own page:</p>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/research-covid.png" alt="We looked at gov.uk and worldometers.info for data visualization examples" class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <div class="list">
+        <ol>
+          <li>There are “big numbers” above the fold to highlight the important statistics.</li>
+          <li>gov.uk included a jurisdictional breakdown of the cases on both map and table formats.</li>
+          <li>gov.uk has the information presented in both graph and table formats to allow for accessibility and screen readers to easily relay the information shown.</li>
+          <li>Both included large charts that focused presented the information minimalistically while still including descriptions as necessary.</li>
+        </ol> 
+      </div>  
+      <div class="spacer"></div>
+      <p class="paragraph">We created the data visualizations in Figma, and then in React.js using Apex Charts. Working quickly, we arranged multiple usability tests to iterate on the design.</p>
+      <div class="spacer"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/iterations2-covid.png" alt="We iterated upon our page multiple times throughout our user testing sessions" class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">From testing, I learned that we had to keep accessibility in mind. A user who is colourblind brought to our attention how difficult it was for them to differentiate the items being compared since we relied on colour to separate items on the same graph. </p>
+      <p class="paragraph">Having never worked with data visualizations before, I found resources to help me learn how to present data in the best way for many to understand. I used <a class="link" href="https://fossheim.io/writing/posts/accessible-dataviz-design/" target="_blank" rel="noopener"><strong>Sarah Fossheim’s introduction article</strong></a> and <a class="link" href="https://keen.io/blog/accessibility-in-data-vis/" target="_blank" rel="noopener"><strong>Keen.io’s guide</strong></a>.</p>
+      <p class="paragraph">The two main things I learned was to not rely on colour as a way to differentiate between items on a graph and to provide labels where possible, as well as to limit the items being presented to a minimum. </p>
+      <div class="spacer"></div>
+      <figure data-aos="fade-up">
+        <img loading="lazy" src="images/accessible-covid.png" alt="Comparing the initial inaccessible version to the mostly final accessible version" class="img-fluid">
+      </figure>
+      <div class="spacer"></div>
+      <p class="paragraph">After multiple rounds of iterations and more user testing, we had developed a set of visualizations that were ready for launchas of April 2020.</p>
+    </div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <p class="category">reflecting back</p>
+      <div class="space"></div>
+      <p class="big">Designing for unprecedented times</p>
+      <p class="paragraph">These really were difficult times for many Ontarians. I got to speak with individuals from across Ontario, hear their unique stories, and learn how I can help. Each interview showed me how difficult it is to design a website meant to be accessible since the COVID-19 pandemic affects everyone. I am honoured to have had the opportunity to help design a resource that many can turn to in these times of need. </p>
+    </div>
+    <div class="spacers"></div>
+    <div class="row container-fluid" data-aos="fade-up">
+      <p class="nav"><a class="case-studies" href="https://emily.louie.ca/" rel="noopener">all</a><a class="already-here" href="#top" class="js-smoothscroll">ontario covid-19</a> <a class="case-studies" href="https://emily.louie.ca/microsoft" rel="noopener">microsoft</a> <a class="case-studies" href="https://emily.louie.ca/" rel="noopener">serviceontario online renewals</a> <a class="case-studies" href="https://emily.louie.ca/bobabuds" rel="noopener">boba buds</a></p>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="footer-container">
+  <div class="container-fluid">
+      <div class="social">
+        <a href="mailto:emilyslouie@gmail.com" title="Email" class="p-3"><span class="fa fa-envelope"></span></a>
+        <a href="https://www.linkedin.com/in/emilyslouie" title="Linkedin" class="p-3"><span class="fa fa-linkedin"></span></a>
+        <a href="https://www.github.com/emilyslouie" title="Github" class="p-3"><span class="fa fa-github"></span></a>
+        <a href="https://dribbble.com/emilyslouie" class="p-3"><span class="fa fa-dribbble"></span></a>
+      </div>
+      <p>
+        Designed and developed with <span class="fa fa-heart"></span> by Emily Louie 2020
+      </p>
+  </div> 
+</footer>
+
+</div>
+
+
+<script src="js/scripts-all.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // When the user scrolls the page, execute myFunction 
+  window.onscroll = function() {myFunction()};
+  
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+</script>
+
+
+
+</body>
+</html>
