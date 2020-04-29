@@ -3,8 +3,7 @@
 ::selection { background: rgba(255, 229, 235, 0.849); }
 
 a:hover, a:active, a:focus { 
-    text-decoration: none; 
-    outline: none; 
+    text-decoration: none;
 }
 
 html, body {
