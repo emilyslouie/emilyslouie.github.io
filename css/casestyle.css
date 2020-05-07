@@ -6,7 +6,7 @@ a:hover, a:active, a:focus {
     text-decoration: none;
 }
 
-body {
+html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
