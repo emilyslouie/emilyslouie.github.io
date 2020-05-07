@@ -696,3 +696,8 @@ figcaption {
     color: #5a5a5a;
     font-style: italic;
 }
+
+p .heart:hover {
+    color: #9f314e;
+    cursor: text
+}

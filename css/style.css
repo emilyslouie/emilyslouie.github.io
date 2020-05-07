@@ -789,3 +789,9 @@ pointer-events: none;
     margin-bottom: -5px;
 }
 
+p .heart:hover {
+    color: #9f314e;
+    cursor: text;
+}
+
+
