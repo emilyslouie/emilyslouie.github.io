@@ -94,9 +94,6 @@ img {
     text-decoration: none; 
     outline: none; 
     color: #9f314e; 
-    -webkit-transform: scale(1.7); 
-    -ms-transform: scale(1.7); 
-    transform: scale(1.7);
 }
 
 .navbar .menu {
@@ -537,9 +534,6 @@ ol p{
 
 .footer-container .social a:hover, a:focus {
     color: #9f314e; 
-    -webkit-transform: scale(1.7); 
-    -ms-transform: scale(1.7); 
-    transform: scale(1.7);
 }
 
 .footer-container .social img {
