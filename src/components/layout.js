@@ -16,13 +16,13 @@ const Layout = ({ children }) => {
   const darkMode = useDarkMode(false)
 
   // const [darkTheme, setDarkTheme] = useState(true)
-  const [darkThemeIcon, setDarkThemeIcon] = useState(!darkMode.value)
+  const [darkThemeIcon, setDarkThemeIcon] = useState(darkMode.value)
 
-  // useEffect(() => {
-  //   setDarkThemeIcon(!darkThemeIcon)
-  //   setDarkThemeIcon(!darkThemeIcon)
-  //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
-  // }, [])
+  useEffect(() => {
+    setDarkThemeIcon(!darkThemeIcon)
+    setDarkThemeIcon(!darkThemeIcon)
+    //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
+  }, [])
   // useEffect(() => {
   //   setDarkThemeIcon(!darkMode.value)
   //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
