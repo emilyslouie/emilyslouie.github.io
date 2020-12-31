@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   const darkMode = useDarkMode(true)
 
   // const [darkTheme, setDarkTheme] = useState(true)
-  const [darkThemeIcon, setDarkThemeIcon] = useState(darkMode.value)
+  const [darkThemeIcon, setDarkThemeIcon] = useState(!darkMode.value)
   // useEffect(() => {
   //   setDarkThemeIcon(darkMode.value)
   // }, [darkMode.value])
@@ -48,6 +48,7 @@ const Layout = ({ children }) => {
   //   return selectedTheme || false
   // }
   const toggleDarkMode = checked => {
+    setDarkThemeIcon(checked)
     checked ? darkMode.disable() : darkMode.enable()
   }
 
@@ -87,9 +88,10 @@ const Layout = ({ children }) => {
                     opacity: "0.7",
                     transform: "translateY(2px) rotate(50deg)",
                   }}
+                  checked={darkThemeIcon}
                   size={18}
                   onChange={toggleDarkMode}
-                  moonColor="#000000 !important"
+                  moonColor="#000000"
                   sunColor="#FFFFFF"
                 />
                 <Link className="effect" to="/about">
