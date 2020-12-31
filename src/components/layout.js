@@ -13,17 +13,27 @@ import useDarkMode from "use-dark-mode"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
-  const darkMode = useDarkMode(true)
+  const darkMode = useDarkMode(false)
 
   // const [darkTheme, setDarkTheme] = useState(true)
   const [darkThemeIcon, setDarkThemeIcon] = useState(!darkMode.value)
 
   // useEffect(() => {
   //   setDarkThemeIcon(!darkThemeIcon)
-  //   setDarkThemeIcon(!darkMode.value)
+  //   setDarkThemeIcon(!darkThemeIcon)
+  //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
   // }, [])
   // useEffect(() => {
-  //   setDarkThemeIcon(darkMode.value)
+  //   setDarkThemeIcon(!darkMode.value)
+  //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
+  // }, [])
+
+  // useEffect(() => {
+  //   darkMode.value === true ? darkMode.disable() : darkMode.enable()
+  //   darkMode.value === true ? darkMode.disable() : darkMode.enable()
+  // }, [])
+  // useEffect(() => {
+  //   setDarkThemeIcon(!darkMode.value)
   // }, [darkMode.value])
 
   // useEffect(() => {
