@@ -804,6 +804,11 @@ body.dark-mode {
     transition: 0.5s;
     -webkit-transition: 0.5s;
     background: url("../images/navbar-dark.png");
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgba(27, 27, 35, 1) 0%,
+    //   rgba(27, 27, 35, 0) 100%
+    // );
     background-repeat: repeat-x;
     background-size: auto 100%;
     a {
@@ -870,6 +875,11 @@ body.light-mode {
     transition: 0.5s;
     -webkit-transition: 0.5s;
     background: url("../images/navbar-light.png") repeat;
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgba(255, 255, 255, 1) 0%,
+    //   rgba(255, 255, 255, 0) 100%
+    // );
     background-repeat: repeat-x;
     background-size: auto 100%;
     a {

@@ -14,54 +14,13 @@ import "./layout.scss"
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode(false)
-
-  // const [darkTheme, setDarkTheme] = useState(true)
   const [darkThemeIcon, setDarkThemeIcon] = useState(darkMode.value)
 
   useEffect(() => {
     setDarkThemeIcon(!darkThemeIcon)
     setDarkThemeIcon(!darkThemeIcon)
-    //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
   }, [])
-  // useEffect(() => {
-  //   setDarkThemeIcon(!darkMode.value)
-  //   // darkMode.value === true ? darkMode.disable() : darkMode.enable()
-  // }, [])
 
-  // useEffect(() => {
-  //   darkMode.value === true ? darkMode.disable() : darkMode.enable()
-  //   darkMode.value === true ? darkMode.disable() : darkMode.enable()
-  // }, [])
-  // useEffect(() => {
-  //   setDarkThemeIcon(!darkMode.value)
-  // }, [darkMode.value])
-
-  // useEffect(() => {
-  //   localStorage.setItem("dark", JSON.stringify(darkTheme))
-  // }, [darkTheme])
-  // useEffect(() => {
-  //   setDarkTheme(getDefaultTheme())
-  // }, [])
-  // function getDefaultTheme() {
-  //   let selectedTheme = true
-
-  //   if (typeof window !== "undefined") {
-  //     selectedTheme = JSON.parse(localStorage.getItem("dark"))
-
-  //     if (selectedTheme == null) {
-  //       if (
-  //         window.matchMedia &&
-  //         window.matchMedia("(prefers-color-scheme: dark)").matches
-  //       ) {
-  //         selectedTheme = true
-  //       } else {
-  //         selectedTheme = false
-  //       }
-  //     }
-  //   }
-
-  //   return selectedTheme || false
-  // }
   const toggleDarkMode = checked => {
     setDarkThemeIcon(!darkThemeIcon)
     checked ? darkMode.disable() : darkMode.enable()
@@ -89,7 +48,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <div className={darkTheme ? " dark-theme" : "light-theme"}> */}
       <div className="container">
         <Fade duration={1500}>
           <nav id="navbar">
@@ -130,7 +88,6 @@ const Layout = ({ children }) => {
           <Footer />
         </Fade>
       </div>
-      {/* </div> */}
     </>
   )
 }

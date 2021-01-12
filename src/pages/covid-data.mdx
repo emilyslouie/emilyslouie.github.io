@@ -1,0 +1,106 @@
+---
+title: Empowering Ontarians with COVID-19 data
+shortTitle: COVID-19 Data Visualizations
+path: /covid-data
+type: experience
+thumbnail: "../images/thumbnails/covid-data.png"
+order: 6
+tags: [Product design, User research, Frontend development]
+company: Ontario Digital Service
+role: Product designer and frontend developer
+timeline: Mar - Apr 2020 and Oct – Dec 2020
+---
+
+import { Link, graphql } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Details, Blockquote } from "../components/details.js"
+import MoreProjects from "../components/moreProjects.js"
+
+<div className="header">
+  <h1 className="purple">{props.pageContext.frontmatter.shortTitle}</h1>
+  <h2>{props.pageContext.frontmatter.title}</h2>
+</div>
+
+As a product designer intern at the Ontario Digital Service when the COVID-19 pandemic began, I had the opportunity to design data visualizations to inform the public. Later in the year, I returned as a full stack developer intern to continue the development of the data visualization pages. During my internship, I helped to launch three iterations of the site to production which continues receives over 450,000 views per month. Visit the live website at <a href="https://covid-19.ontario.ca/data" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.
+
+<Details
+  company={props.pageContext.frontmatter.company}
+  role={props.pageContext.frontmatter.role}
+  timeline={props.pageContext.frontmatter.timeline}
+  skills={props.pageContext.frontmatter.tags}
+/>
+
+![Header image of COVID-19 microsite](../images/covid-data/header.png)
+
+#### Context
+
+## Problem
+
+## Breaking down the goal
+
+## Our approach
+
+#### Research
+
+## Understanding our audience
+
+#### Design
+
+## Structuring the site
+
+## Surfacing important information
+
+## Continuing to learn more
+
+#### Development
+
+## Surfacing important information
+
+#### Solution
+
+## Final site
+
+## Results
+
+## Next steps
+
+## Reflecting back
+
+These really were difficult times for many Ontarians. I spoke with individuals from across Ontario, hear their unique stories, and learn how I can help. Each interview showed me how difficult it is to design a website meant to be accessible since the COVID-19 pandemic affects everyone. I am honoured to have had the opportunity to help design a resource that many can turn to in these times of need.
+
+<br />
+
+#### More case studies
+
+<MoreProjects
+  projects={props.data.allMdx.edges}
+  current={props.pageContext.frontmatter.order}
+/>
+
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            shortTitle
+            path
+            type
+            order
+            tags
+            company
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 900) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
