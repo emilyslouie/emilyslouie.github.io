@@ -12,10 +12,10 @@ const AboutPage = props => (
   <Layout>
     <SEO title="About" />
     <div className="about">
-      <h1>Hey, I'm Emily!</h1>
       <div className="row">
         <div className="column">
           <div className="intro">
+            <h1>Hey, I'm Emily!</h1>
             <Blockquote text={about.about.tagline} />
             {about.about.description.map(item => {
               return (
