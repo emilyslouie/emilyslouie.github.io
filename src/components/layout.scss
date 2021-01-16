@@ -136,6 +136,11 @@ a:focus {
     font-size: 18px;
     margin-bottom: -32px;
   }
+  ul {
+    li {
+      margin-bottom: 16px;
+    }
+  }
 
   ol {
     li {
@@ -307,6 +312,11 @@ a:focus {
     }
     .column-1 {
       width: 10%;
+    }
+
+    .full-img {
+      max-width: 90%;
+      margin-left: 0;
     }
 
     .column-centre-img {
@@ -840,6 +850,11 @@ body.dark-mode {
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     background: url("../images/navbar-dark.png");
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgba(27, 27, 35, 1) 0%,
+    //   rgba(27, 27, 35, 0) 100%
+    // );
     background-repeat: repeat-x;
     background-size: auto 100%;
     a {
@@ -909,6 +924,11 @@ body.light-mode {
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     background: url("../images/navbar-light.png") repeat;
+    // background: linear-gradient(
+    //   to bottom,
+    //   rgba(255, 255, 255, 1) 0%,
+    //   rgba(255, 255, 255, 0) 100%
+    // );
     background-repeat: repeat-x;
     background-size: auto 100%;
     a {

@@ -51,22 +51,6 @@ function Hero() {
       <div className="roles">
         <p>
           <strong>
-            <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
-              Blueprint
-            </a>
-          </strong>{" "}
-          – Product Designer (Now)
-        </p>
-        <p>
-          <strong>
-            <a href="https://cutc.ca" target="_blank" rel="noreferrer">
-              Canadian Undergraduate Tech Conference
-            </a>
-          </strong>{" "}
-          – Lead Designer (Now)
-        </p>
-        <p>
-          <strong>
             <a
               href="https://www.ontario.ca/page/ontario-digital-service"
               target="_blank"
@@ -88,6 +72,22 @@ function Hero() {
             </a>
           </strong>{" "}
           – Designer & Developer (2019)
+        </p>
+        <p>
+          <strong>
+            <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
+              Blueprint
+            </a>
+          </strong>{" "}
+          – Product Designer (Now)
+        </p>
+        <p>
+          <strong>
+            <a href="https://cutc.ca" target="_blank" rel="noreferrer">
+              Canadian Undergraduate Tech Conference
+            </a>
+          </strong>{" "}
+          – Lead Designer (Now)
         </p>
       </div>
       <p>
