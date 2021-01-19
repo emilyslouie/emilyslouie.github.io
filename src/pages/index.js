@@ -20,6 +20,27 @@ function IndexPage({ data }) {
       <Hero />
       <Gallery section="Experience" projects={filteredExperience} />
       <Gallery section="Side Hustles" projects={filteredProjects} />
+      <div className="project-section">
+        <h2>Currently learning about...</h2>
+        <hr />
+        <div className="learning">
+          <ul>
+            <li>Web development</li>
+            <li>VR/AR/XR design and development</li>
+            <li>Game development</li>
+          </ul>
+          <h3>
+            <a
+              className="effect"
+              href="https://www.notion.so/emilyslouie/Learning-everyday-94851f74f9cd4dd89145f022fd340221"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn more about what I'm learning ➜
+            </a>
+          </h3>
+        </div>
+      </div>
     </Layout>
   )
 }
