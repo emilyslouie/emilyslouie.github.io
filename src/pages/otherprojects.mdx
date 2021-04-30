@@ -239,9 +239,11 @@ export const pageQuery = graphql`
             company
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 900) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 900
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

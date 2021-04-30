@@ -16,6 +16,13 @@
   },
   "experience": [
     {
+      "role": "Frontend Developer",
+      "company": "Unity Technologies",
+      "link": "https://unity.com",
+      "date": "May - August 2021",
+      "description": [" "]
+    },
+    {
       "role": "Full Stack Developer",
       "company": "Ontario Digital Service",
       "link": "https://www.ontario.ca/page/ontario-digital-service",
@@ -47,12 +54,13 @@
   ],
   "community": [
     {
-      "role": "Product Designer",
+      "role": "Developer (current) & Product Designer (2020-2021)",
       "company": "Blueprint",
       "link": "https://uwblueprint.org",
       "date": "August 2020 - Present",
       "description": [
-        "Designed a decision workflow platform for time, money, and professional expertise to be invested in local non-profits"
+        "Designed a decision workflow platform for time, money, and professional expertise to be invested in local non-profits",
+        "Spearheaded the creation of a client management tool used by an organization helping to improve literacy education"
       ]
     },
     {
@@ -69,7 +77,7 @@
       "role": "Lead Designer and Developer",
       "company": "Waterloop",
       "link": "https://teamwaterloop.ca",
-      "date": "February 2020 - Present",
+      "date": "February 2020 - April 2021",
       "description": [
         "Redesigned and helped develop the team website at <a href=\"https://teamwaterloop.ca\" target=\"_blank\" rel=\"noreferrer\">teamwaterloop.ca</a>"
       ]

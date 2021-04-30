@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const ProjectCard = props => {
@@ -7,8 +7,8 @@ const ProjectCard = props => {
     <div className="card">
       <Link to={props.path}>
         <div>
-          <Img
-            fluid={props.thumbnail.childImageSharp.fluid}
+          <GatsbyImage
+            image={props.thumbnail.childImageSharp.gatsbyImageData}
             alt={props.title}
           />
         </div>

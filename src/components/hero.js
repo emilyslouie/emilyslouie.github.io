@@ -50,18 +50,20 @@ function Hero() {
       </h3>
       <div className="roles">
         <p>
+          {" "}
+          Currently, I'm helping developers create immersive experiences at{" "}
           <strong>
-            <a
-              href="https://www.ontario.ca/page/ontario-digital-service"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ontario Digital Service
+            <a href="https://unity.com" target="_blank" rel="noreferrer">
+              Unity Technologies
             </a>
           </strong>{" "}
-          – Product Designer & Full Stack Developer (2020)
-        </p>
-        <p>
+          as a frontend developer, and volunteering with{" "}
+          <strong>
+            <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
+              Blueprint
+            </a>
+          </strong>{" "}
+          as a developer. Previously, I've designed and developed at{" "}
           <strong>
             <a
               href="https://medium.com/@emilyslouie/3-things-i-learned-at-microsoft-2f40bdf93c9b"
@@ -71,28 +73,22 @@ function Hero() {
               Microsoft
             </a>
           </strong>{" "}
-          – Designer & Developer (2019)
-        </p>
-        <p>
+          and{" "}
           <strong>
-            <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
-              Blueprint
+            <a
+              href="https://www.ontario.ca/page/ontario-digital-service"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ontario Digital Service
             </a>
-          </strong>{" "}
-          – Product Designer (Now)
-        </p>
-        <p>
-          <strong>
-            <a href="https://cutc.ca" target="_blank" rel="noreferrer">
-              Canadian Undergraduate Tech Conference
-            </a>
-          </strong>{" "}
-          – Lead Designer (Now)
+          </strong>
+          .
         </p>
       </div>
-      <p>
+      {/* <p>
         <strong>Seeking internships for Summer 2021.</strong>
-      </p>
+      </p> */}
       <SocialMedia />
     </div>
   )

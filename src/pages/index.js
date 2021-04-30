@@ -21,11 +21,11 @@ function IndexPage({ data }) {
       <Gallery section="Experience" projects={filteredExperience} />
       <Gallery section="Side Hustles" projects={filteredProjects} />
       <div className="project-section">
-        <h2>Currently learning about...</h2>
+        <h2>I'm learning about...</h2>
         <hr />
         <div className="learning">
           <ul>
-            <li>Web development</li>
+            <li>3D web development</li>
             <li>VR/AR/XR design and development</li>
             <li>Game development</li>
           </ul>
@@ -36,7 +36,7 @@ function IndexPage({ data }) {
               target="_blank"
               rel="noreferrer"
             >
-              Learn more about what I'm learning ➜
+              Learn more ➜
             </a>
           </h3>
         </div>
@@ -63,9 +63,7 @@ export const pageQuery = graphql`
             company
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 900) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
               }
             }
           }

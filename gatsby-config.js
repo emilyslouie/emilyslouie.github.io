@@ -6,12 +6,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
-      },
-    },
-    {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {
         classNameDark: "dark-mode",
@@ -21,6 +15,10 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {

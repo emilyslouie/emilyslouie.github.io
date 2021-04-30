@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import about from "../assets/about.json"
 import Slide from "react-reveal/Slide"
 import SocialMedia from "../components/socialmedia"
@@ -30,8 +30,8 @@ const AboutPage = props => (
           </div>
         </div>
         <div className="column">
-          <Img
-            fluid={props.data.fileName.childImageSharp.fluid}
+          <GatsbyImage
+            image={props.data.fileName.childImageSharp.gatsbyImageData}
             alt="Emily in Taiwan"
           />
           <p className="caption">
@@ -117,12 +117,10 @@ const AboutPage = props => (
 export default AboutPage
 
 export const query = graphql`
-  query {
+  {
     fileName: file(relativePath: { eq: "emily.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

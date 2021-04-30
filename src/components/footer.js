@@ -7,14 +7,10 @@ function Footer() {
   return (
     <div className="footer">
       <hr />
-      <SocialMedia />
-      <p>
-        Designed and developed with{" "}
-        <span>
-          <FontAwesomeIcon size="lg" className="heart" icon={faHeart} />
-        </span>{" "}
-        by Emily Louie
-      </p>
+      <div className="horizontal">
+        <SocialMedia />
+        <p>Designed and developed by Emily Louie</p>
+      </div>
     </div>
   )
 }

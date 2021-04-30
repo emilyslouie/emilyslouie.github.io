@@ -622,6 +622,7 @@ nav {
   p {
     margin-bottom: 0;
     margin-top: 8px;
+    line-height: 180%;
   }
   a {
     text-decoration: none !important;
@@ -656,7 +657,7 @@ nav {
 
 .social-icons {
   padding-top: 16px;
-  max-width: 140px;
+  width: 140px;
   display: flex;
   justify-content: space-between;
   .toggle {
@@ -750,11 +751,12 @@ nav {
   -moz-transition: 0.3s;
   z-index: 1;
   img {
-    height: 325px;
-    -o-object-fit: contain;
-    object-fit: contain;
+    height: 280px;
+    // -o-object-fit: contain;
+    // object-fit: contain;
     z-index: -5;
     border-radius: 12px 12px 0 0;
+    cursor: pointer;
   }
 
   ul {
@@ -799,6 +801,11 @@ nav {
   p {
     color: $blue-grey;
     opacity: 1;
+  }
+
+  .horizontal {
+    display: flex;
+    justify-content: space-between;
   }
 
   .heart {
@@ -1084,6 +1091,9 @@ body.light-mode {
   .hero {
     height: 100%;
     padding-bottom: 32px;
+  }
+  .footer .horizontal {
+    flex-direction: column;
   }
 
   .name-heading {
