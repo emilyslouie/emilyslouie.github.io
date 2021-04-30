@@ -370,11 +370,12 @@ a:focus {
     -moz-transition: 0.3s;
     z-index: 1;
     img {
-      height: 325px;
-      -o-object-fit: contain;
-      object-fit: contain;
+      height: 280px;
+      // -o-object-fit: contain;
+      // object-fit: contain;
       z-index: -5;
       border-radius: 12px 12px 0 0 !important;
+      margin-bottom: 0 !important;
     }
     h2 {
       font-size: 24px !important;

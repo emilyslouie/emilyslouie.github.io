@@ -63,7 +63,11 @@ export const pageQuery = graphql`
             company
             thumbnail {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+                gatsbyImageData(
+                  height: 280
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP]
+                )
               }
             }
           }
