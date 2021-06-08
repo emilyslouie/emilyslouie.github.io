@@ -1,4 +1,20 @@
 import React from "react"
+import styled from "styled-components"
+
+const Title = styled.span`
+  color: #c989df;
+`
+
+const DetailsContainer = styled.div`
+  margin-bottom: 48px;
+  p {
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
+  span {
+    font-weight: 700;
+  }
+`
 
 export const Details = props => {
   let skills = ""
@@ -12,19 +28,19 @@ export const Details = props => {
       <div className="row">
         <div className="column">
           <p>
-            <span className="purple">Company</span> – {props.company}
+            <Title>Company</Title> – {props.company}
           </p>
           <p>
-            <span className="purple">Timeline</span> – {props.timeline}
+            <Title>Timeline</Title> – {props.timeline}
           </p>
         </div>
         <div className="column">
           <p>
-            <span className="purple">Role</span> – {props.role}
+            <Title>Role</Title> – {props.role}
           </p>
 
           <p>
-            <span className="purple">Skills</span> – {skills}
+            <Title>Skills</Title> – {skills}
           </p>
         </div>
       </div>
@@ -42,24 +58,34 @@ export const DetailsProject = props => {
   return (
     <div className="details margin-top">
       <p>
-        <span className="purple">Timeline</span> – {props.timeline}
+        <Title>Timeline</Title> – {props.timeline}
       </p>
       <p>
-        <span className="purple">Role</span> – {props.role}
+        <Title>Role</Title> – {props.role}
       </p>
       <p>
-        <span className="purple">Skills</span> – {skills}
+        <Title>Skills</Title> – {skills}
       </p>
     </div>
   )
 }
 
+const Block = styled.div`
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-left: 4px solid #c989df;
+
+  h3 {
+    margin-left: 24px;
+    font-weight: 500;
+    line-height: 180%;
+  }
+`
+
 export const Blockquote = props => {
   return (
-    <div className="blockquote">
-      <div className="text">
-        <h3>{props.text}</h3>
-      </div>
-    </div>
+    <Block>
+      <h3>{props.text}</h3>
+    </Block>
   )
 }

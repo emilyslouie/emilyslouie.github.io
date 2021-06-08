@@ -20,73 +20,13 @@ $header-font-weight: 700;
 
 $border-radius: 8px;
 
-body {
-  overflow-x: hidden;
-  font-family: $open-sans;
-  margin: 0;
-  background-color: #1b1b23;
-}
-
 // typography
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $ibm-plex;
-  margin-bottom: 16px;
-  font-weight: $header-font-weight;
-  margin-top: 0;
-  color: inherit;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 21px;
-}
 
 .purple {
   color: $purple;
 }
 
-a,
-a:active,
-a:visited,
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
 // main container
-.container {
-  max-width: 850px;
-  margin: auto;
-  .typer {
-    display: inline-block;
-    overflow-wrap: normal;
-    white-space: pre-line;
-  }
-}
-
-.blockquote {
-  border-left: 4px solid $purple;
-
-  .text {
-    margin-left: 24px;
-    h3 {
-      font-weight: 500;
-      line-height: 180%;
-    }
-  }
-}
 
 .middle iframe {
   display: block;
@@ -262,7 +202,6 @@ a:focus {
   }
 
   .details {
-    // // margin-top: 48px;
     margin-bottom: 48px;
     p {
       margin-top: 8px;
@@ -273,10 +212,6 @@ a:focus {
     }
   }
 
-  .blockquote {
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -535,13 +470,6 @@ a:focus {
   }
 }
 
-.hero {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .link {
   text-decoration: none;
   transition: color 0.15s;
@@ -610,14 +538,6 @@ nav {
   }
 }
 
-.name-heading {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  .name {
-    color: $purple;
-  }
-}
-
 .roles {
   margin-bottom: 16px;
   p {
@@ -635,11 +555,6 @@ nav {
       -moz-transition: 0.2s;
     }
   }
-}
-
-.sub-heading {
-  font-weight: 500;
-  font-family: $ibm-plex;
 }
 
 .toggle {
@@ -886,10 +801,6 @@ body.dark-mode {
     }
   }
 
-  .sub-heading {
-    color: inherit;
-  }
-
   .cursor {
     color: $light-grey-blue;
   }
@@ -956,10 +867,6 @@ body.light-mode {
     }
   }
 
-  .sub-heading {
-    color: $black-blue;
-  }
-
   p {
     color: $black;
   }
@@ -996,43 +903,7 @@ body.light-mode {
   }
 }
 
-//Scrollbar themes
-* {
-  scrollbar-width: thin;
-  scrollbar-color: $grey $heading-black;
-}
-
-/* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
-*::-webkit-scrollbar-track {
-  background: $heading-black;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: $grey;
-  border-radius: 20px;
-  border: 3px solid $heading-black;
-}
-
-//Selection highlight colours
-::-moz-selection {
-  background: #e3c4f8c0;
-}
-
-::selection {
-  background: #e3c4f8c0;
-}
-
 @media only screen and (max-width: 900px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-    .typer {
-      display: block;
-    }
-  }
-
   .nav-container {
     padding-top: 20px;
     font-size: 16px;
@@ -1090,27 +961,11 @@ body.light-mode {
 }
 @media only screen and (max-width: 520px) {
   .hero {
-    height: 100%;
-    padding-bottom: 32px;
   }
   .footer .horizontal {
     flex-direction: column;
   }
 
-  .name-heading {
-    min-height: 160px;
-    padding-bottom: 0px;
-  }
-  h1 {
-    font-size: 36px;
-  }
-  h2 {
-    font-size: 21px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
   .card {
     min-width: 100%;
   }

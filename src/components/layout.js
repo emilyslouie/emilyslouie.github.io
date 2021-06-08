@@ -1,16 +1,100 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
 import "typeface-ibm-plex-sans"
 import "typeface-open-sans"
 import Fade from "react-reveal/Fade"
 import Footer from "./footer.js"
 import { DarkModeSwitch } from "react-toggle-dark-mode"
-import Resume from "../assets/emilylouie.pdf"
+import Resume from "../../static/emilylouie.pdf"
 import useDarkMode from "use-dark-mode"
+import styled, { createGlobalStyle } from "styled-components"
+import { palette, font, other, media } from "./constants"
 
 import "./layout.scss"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    overflow-x: hidden;
+    font-family: ${font.openSans};
+    margin: 0;
+    background-color: ${palette.darkThemeBg};
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${font.ibmPlex};
+    margin-bottom: 16px;
+    font-weight: ${other.headerFontWeight};
+    margin-top: 0;
+    color: inherit;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 21px;
+  }
+  
+  a, a:active, a:visited, a:hover, a:focus {
+    text-decoration: none;
+  }
+
+  //Selection highlight colours
+  ::-moz-selection {
+    background: ${palette.highlight};
+  }
+
+  ::selection {
+    background: ${palette.highlight};
+  }
+
+  //Scrollbar themes
+* {
+  scrollbar-width: thin;
+  scrollbar-color: ${palette.grey} ${palette.headingBlack};
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: ${palette.headingBlack};
+}
+*::-webkit-scrollbar-thumb {
+  background-color: ${palette.grey};
+  border-radius: 20px;
+  border: 3px solid ${palette.headingBlack};
+}
+
+  @media ${media.small} {
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 21px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+`
+const Container = styled.div`
+  max-width: 850px;
+  margin: auto;
+
+  @media ${media.medium} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+`
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode(false)
@@ -48,7 +132,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="container">
+      <GlobalStyle />
+      <Container>
         <Fade duration={1500}>
           <nav id="navbar">
             <div className="nav-container">
@@ -87,7 +172,7 @@ const Layout = ({ children }) => {
         <Fade duration={1500}>
           <Footer />
         </Fade>
-      </div>
+      </Container>
     </>
   )
 }

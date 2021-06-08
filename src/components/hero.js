@@ -1,7 +1,49 @@
 import React from "react"
 import Typing from "react-typing-animation"
-import Slide from "react-reveal/Slide"
+import styled from "styled-components"
+import { palette, font, media } from "./constants"
 import SocialMedia from "./socialmedia"
+
+const HeroContainer = styled.div`
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media ${media.small} {
+    height: 100%;
+    padding-bottom: 32px;
+  }
+`
+
+const NameHeading = styled.h1`
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  .name {
+    color: ${palette.purple};
+  }
+
+  @media ${media.small} {
+    min-height: 160px;
+    padding-bottom: 0px;
+  }
+`
+
+const Typer = styled.div`
+  display: inline-block;
+  overflow-wrap: normal;
+  white-space: pre-line;
+
+  @media ${media.medium} {
+    display: block;
+  }
+`
+
+const Subheading = styled.h3`
+  font-weight: 500;
+  color: inherit;
+`
 
 function Hero() {
   let words = [
@@ -13,41 +55,39 @@ function Hero() {
   ]
 
   return (
-    <div className="hero">
-      <div className="name-heading">
-        <h1>
-          <span className="name">Emily Louie</span> –{" "}
-          <div className="typer">
-            <Typing loop={true} cursorClassName="cursor">
-              <span>{words[0]}</span>
-              <Typing.Speed ms={800} />
-              <Typing.Delay ms={2000} />
-              <Typing.Backspace count={words[0].length + 1} speed={50} />
-              <span>{words[1]}</span>
-              <Typing.Speed ms={800} />
-              <Typing.Delay ms={2000} />
-              <Typing.Backspace count={words[1].length + 1} speed={50} />
-              <span>{words[2]}</span>
-              <Typing.Speed ms={800} />
-              <Typing.Delay ms={2000} />
-              <Typing.Backspace count={words[2].length + 1} speed={50} />{" "}
-              <span>{words[3]}</span>
-              <Typing.Speed ms={800} />
-              <Typing.Delay ms={2000} />
-              <Typing.Backspace count={words[3].length + 1} speed={50} />
-              <span>{words[4]}</span>
-              <Typing.Speed ms={800} />
-              <Typing.Delay ms={2000} />
-              <Typing.Backspace count={words[4].length + 1} speed={50} />
-            </Typing>
-          </div>
-        </h1>
-      </div>
+    <HeroContainer>
+      <NameHeading>
+        <span className="name">Emily Louie</span> –{" "}
+        <Typer>
+          <Typing loop={true} cursorClassName="cursor">
+            <span>{words[0]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[0].length + 1} speed={50} />
+            <span>{words[1]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[1].length + 1} speed={50} />
+            <span>{words[2]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[2].length + 1} speed={50} />{" "}
+            <span>{words[3]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[3].length + 1} speed={50} />
+            <span>{words[4]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[4].length + 1} speed={50} />
+          </Typing>
+        </Typer>
+      </NameHeading>
 
-      <h3 className="sub-heading">
+      <Subheading>
         I’m a creator focused on engineering products and experiences that
         empower people.
-      </h3>
+      </Subheading>
       <div className="roles">
         <p>
           {" "}
@@ -90,7 +130,7 @@ function Hero() {
         <strong>Seeking internships for Summer 2021.</strong>
       </p> */}
       <SocialMedia />
-    </div>
+    </HeroContainer>
   )
 }
 
