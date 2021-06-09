@@ -5,12 +5,15 @@ path: /blog/microsoft-2019
 type: blog
 date: 2019-12-27
 readTime: 5
+tags: [internship, reflection]
+order: 1
 ---
 
 import { Link, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { DetailsBlog, Blockquote } from "../../components/details.js"
 import thumbnail from "../../images/thumbnails/microsoft.png"
+import { NextPrevPosts } from "../../components/blogPost.js"
 
 <div className="header">
   <h1>{props.pageContext.frontmatter.title}</h1>
@@ -99,3 +102,33 @@ Despite not knowing any of the tech stack before beginning the projects, my driv
 Overall, my time interning at Microsoft was amazing. As someone who had just graduated from high school, it was eye-opening to see the inside of a tech giant, and be able to create something that will be used by thousands is even more exciting. I want to extend my thanks to everyone at Microsoft for helping me grow during my summer there.
 
 Now, looking towards the future after my first internship, I am excited to see what journey I will embark on and learn along the way!
+
+#### More posts
+
+<NextPrevPosts
+  projects={props.data.allMdx.edges}
+  current={props.pageContext.frontmatter.order}
+/>
+
+export const pageQuery = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { date: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+            type
+            date
+            order
+            readTime
+          }
+        }
+      }
+    }
+  }
+`

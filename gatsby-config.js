@@ -113,7 +113,7 @@ module.exports = {
       resolve: "gatsby-plugin-page-progress",
       options: {
         includePaths: [],
-        excludePaths: ["/", "/about"],
+        excludePaths: ["/", "/about", "/blog"],
         height: 3,
         prependToBody: true,
         color: `#c989df`,

@@ -45,11 +45,11 @@ export const BlogGallery = props => {
       <Slide bottom>
         <BlogTitle>
           <h2>{props.section}</h2>
-          <Subheading>Just some thoughts and scribbles.</Subheading>
+          <Subheading>Just some scribbles and thoughts.</Subheading>
         </BlogTitle>
 
         {props.posts.map(({ node }) => {
-          const { title, path, date, readTime } = node.frontmatter
+          const { title, path, date, readTime, tags } = node.frontmatter
           return (
             <BlogPost
               key={node.id}
@@ -57,6 +57,7 @@ export const BlogGallery = props => {
               path={path}
               date={date}
               readTime={readTime}
+              tags={tags}
             />
           )
         })}

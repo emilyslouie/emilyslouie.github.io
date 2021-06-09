@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { palette } from "./constants"
 
 const Title = styled.span`
   color: #c989df;
@@ -25,6 +26,10 @@ const DetailsBlogContainer = styled(DetailsContainer)`
   p {
     margin-top: 0px;
   }
+`
+
+const DateSpan = styled.span`
+  color: ${palette.purple};
 `
 
 export const Details = props => {
@@ -93,7 +98,7 @@ export const DetailsBlog = props => {
     <>
       <DetailsBlogContainer>
         <p>
-          <span>{date}</span> // {props.time} min read
+          <DateSpan>{date}</DateSpan> // {props.time} min read
         </p>
       </DetailsBlogContainer>
     </>
