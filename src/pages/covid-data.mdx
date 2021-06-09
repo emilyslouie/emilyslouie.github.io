@@ -536,7 +536,10 @@ I am proud of the overall impact I was able to make through working on Ontario's
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
       edges {
         node {
           id

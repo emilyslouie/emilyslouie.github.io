@@ -225,7 +225,10 @@ This project was submitted to Starterhacks where we received the “Best Pitch A
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
       edges {
         node {
           id

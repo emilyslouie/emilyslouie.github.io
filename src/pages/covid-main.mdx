@@ -312,7 +312,10 @@ These really were difficult times for many Ontarians. I spoke with individuals f
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
       edges {
         node {
           id

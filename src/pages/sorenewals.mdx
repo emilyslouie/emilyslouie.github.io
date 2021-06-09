@@ -255,10 +255,8 @@ To further understand the frustrations that Ontarians were having with the platf
       </p>
     </AccordionItemPanel>
 
-
   </AccordionItem>
 </Accordion>
-
 
 These findings presented the opportunity to explore the following refined problem statement and goal for our solution:
 
@@ -680,10 +678,8 @@ One of the most notable changes we made was in our third week when we noticed On
       </p>
     </AccordionItemPanel>
 
-
   </AccordionItem>
 </Accordion>
-
 
 ## Implementing the feedback
 
@@ -900,7 +896,10 @@ Regarding the pitched redesigns, as of November 2020, work has been done to revi
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
       edges {
         node {
           id

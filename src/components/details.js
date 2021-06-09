@@ -16,6 +16,17 @@ const DetailsContainer = styled.div`
   }
 `
 
+const DetailsProjectContainer = styled(DetailsContainer)`
+  margin-top: 32px;
+`
+
+const DetailsBlogContainer = styled(DetailsContainer)`
+  margin-top: -20px;
+  p {
+    margin-top: 0px;
+  }
+`
+
 export const Details = props => {
   let skills = ""
   props.skills.map((item, i) =>
@@ -24,7 +35,7 @@ export const Details = props => {
       : (skills += `${item}`)
   )
   return (
-    <div className="details">
+    <DetailsContainer>
       <div className="row">
         <div className="column">
           <p>
@@ -44,7 +55,7 @@ export const Details = props => {
           </p>
         </div>
       </div>
-    </div>
+    </DetailsContainer>
   )
 }
 
@@ -56,7 +67,7 @@ export const DetailsProject = props => {
       : (skills += `${item}`)
   )
   return (
-    <div className="details margin-top">
+    <DetailsProjectContainer>
       <p>
         <Title>Timeline</Title> – {props.timeline}
       </p>
@@ -66,7 +77,26 @@ export const DetailsProject = props => {
       <p>
         <Title>Skills</Title> – {skills}
       </p>
-    </div>
+    </DetailsProjectContainer>
+  )
+}
+
+export const DetailsBlog = props => {
+  let date = new Date(props.date).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "utc",
+  })
+
+  return (
+    <>
+      <DetailsBlogContainer>
+        <p>
+          <span>{date}</span> // {props.time} min read
+        </p>
+      </DetailsBlogContainer>
+    </>
   )
 }
 

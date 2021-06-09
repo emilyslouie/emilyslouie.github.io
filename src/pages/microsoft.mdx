@@ -372,7 +372,10 @@ Overall, I am proud of the work that we were able to accomplish as a team, and e
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { order: ASC, fields: [frontmatter___order] }) {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
       edges {
         node {
           id

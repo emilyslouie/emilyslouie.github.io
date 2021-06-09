@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import SEO from "../components/seo"
-import Gallery from "../components/gallery"
+import { Gallery } from "../components/gallery"
 
 function IndexPage({ data }) {
   const { edges: all } = data.allMdx
@@ -48,7 +48,7 @@ function IndexPage({ data }) {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query blogIndex {
+  query homeIndex {
     allMdx(sort: { order: DESC, fields: [frontmatter___order] }) {
       edges {
         node {

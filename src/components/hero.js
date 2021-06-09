@@ -91,22 +91,22 @@ function Hero() {
       <div className="roles">
         <p>
           {" "}
-          Currently, I'm helping developers create immersive experiences at{" "}
+          Currently, developing at{" "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
               Unity Technologies
             </a>
           </strong>{" "}
-          as a frontend developer, and volunteering with{" "}
+          and{" "}
           <strong>
             <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
               Blueprint
             </a>
-          </strong>{" "}
-          as a developer. Previously, I've designed and developed at{" "}
+          </strong>
+          . Previously, designed and developed at{" "}
           <strong>
             <a
-              href="https://medium.com/@emilyslouie/3-things-i-learned-at-microsoft-2f40bdf93c9b"
+              href="https://emily.louie.ca/blog/microsoft-2019"
               target="_blank"
               rel="noreferrer"
             >
