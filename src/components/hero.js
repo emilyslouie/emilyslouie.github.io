@@ -50,8 +50,9 @@ function Hero() {
     "problem solver",
     "designer & developer",
     "engineering student",
-    "piplup enthusiast",
+    "xr enthusiast",
     "avid gamer",
+    "piplup fan",
   ]
 
   return (
@@ -80,6 +81,10 @@ function Hero() {
             <Typing.Speed ms={800} />
             <Typing.Delay ms={2000} />
             <Typing.Backspace count={words[4].length + 1} speed={50} />
+            <span>{words[5]}</span>
+            <Typing.Speed ms={800} />
+            <Typing.Delay ms={2000} />
+            <Typing.Backspace count={words[5].length + 1} speed={50} />
           </Typing>
         </Typer>
       </NameHeading>
@@ -91,19 +96,25 @@ function Hero() {
       <div className="roles">
         <p>
           {" "}
-          Currently, developing at{" "}
+          Developing at{" "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
               Unity Technologies
             </a>
-          </strong>{" "}
-          and{" "}
+          </strong>
+          {", "}
           <strong>
             <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
               Blueprint
             </a>
           </strong>
-          . Previously, designed and developed at{" "}
+          {", and designing at "}
+          <strong>
+            <a href="https://cutc.ca.org" target="_blank" rel="noreferrer">
+              CUTC
+            </a>
+          </strong>
+          . Previously, created cool things at{" "}
           <strong>
             <a
               href="https://emily.louie.ca/blog/microsoft-2019"

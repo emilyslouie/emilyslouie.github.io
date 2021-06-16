@@ -12,6 +12,13 @@ order: 2
 import { Link, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { DetailsBlog, Blockquote } from "../../components/details.js"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion"
 
 <div className="header">
   <h1>{props.pageContext.frontmatter.title}</h1>
@@ -22,4 +29,90 @@ import { DetailsBlog, Blockquote } from "../../components/details.js"
   time={props.pageContext.frontmatter.readTime}
 />
 
-This past summer, I had the amazing opportunity to intern at Microsoft! During my time there, I had the opportunity to work with some incredible people, learn all about the inner-workings of the company, and even develop an app that is used internally within the company.
+My first term of Systems Design Engineering (SYDE) at the University of Waterloo went by so quickly. It feels like just yesterday when I was moving into CMH, interviewing for my first co-op, finishing final exams, and now onto my first co-op.
+
+Throughout this, I'm going to go over my thoughts on the academics, co-op process, and just SYDE in general.
+
+## Academics
+
+<Accordion allowZeroExpanded>
+  <AccordionItem>
+    <AccordionItemHeading>
+      <AccordionItemButton>SYDE 101 + 101L (Communication)</AccordionItemButton>
+    </AccordionItemHeading>
+    <AccordionItemPanel>
+      <p>
+        These were some chill courses that kind of gave an overview of how to
+        communicate as an engineer – whether it's spoken and written English, or
+        visually through diagrams and such. Personally, I enjoyed 101L a lot. It
+        felt like I was able to put my understanding of 3D space and design to
+        the test.
+      </p>
+      <p>
+        These two courses were worth only half a credit each and for the most
+        part, the coursework reflected that much work. Although, I do remember
+        staying at the E5 lab till late at night because I didn't have a Windows
+        machine that can run Solidworks and finish creating my Arc de Triomphe
+        model.
+      </p>
+      <p>
+        In 101, we covered engineering communication in the form of primarily
+        written communication. It was made up of weekly tutorials and a class
+        seminar with guest lecturers. In the tutorials, we would read short
+        texts and then write abstracts, executive summaries, or other analysis
+        pieces. While it may see intimidating like high school english, it ended
+        up being pretty simple and straightforward. One key thing I remember
+        about this course was the chance to interact with profs on a more
+        individual basis because our tutorials were composed of up to 30
+        students. This meant that it felt like high school again where the prof
+        might walk around and ask how we are doing.
+      </p>
+      <p>
+        For 101L, we had Igor and it was one of those courses where I enjoyed
+        what we were learning and doing. For this course, we often had labs
+        where we worked in Solidworks and on paper in this textbook with grid
+        lines and exercises. I enjoyed it since I got to draw, something that I
+        missed doing in the little time I had. This was also my first time
+        learning Solidworks and got me interested in the field of 3D design.
+        While it was difficult at first, it ended up being fun towards the end.
+      </p>
+      <p>
+        I wish we had more courses like 101L where we got to use a tool relevant
+        to our industry and create things with it. I'm looking forward to SYDE
+        223 where we can do some more relevant coding, and SYDE 263 which is
+        engineering prototyping.
+      </p>
+    </AccordionItemPanel>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionItemHeading>
+      <AccordionItemButton>SYDE 111 (Calculus)</AccordionItemButton>
+    </AccordionItemHeading>
+    <AccordionItemPanel>
+      <p>For me, this was a difficult course. Despite coming</p>
+      <p>
+        These two courses were worth only half a credit each and for the most
+        part, the coursework reflected that much work. Although, I do remember
+        staying at the E5 lab till late at night because I didn't have a Windows
+        machine that can run Solidworks and finish creating my Arc de Triomphe
+        model.
+      </p>
+      <p>
+        In 101, we covered engineering communication in the form of primarily
+        written communication. It was made up of weekly tutorials and a class
+        seminar with guest lecturers. In the tutorials, we would read short
+        texts and then write abstracts, executive summaries, or other analysis
+        pieces. While it may see intimidating like high school english, it ended
+        up being pretty simple and straightforward. One key thing I remember
+        about this course was the chance to interact with profs on a more
+        individual basis because our tutorials were composed of up to 30
+        students. This meant that it felt like high school again where the prof
+        might walk around and ask how we are doing.
+      </p>
+      <p>
+        For 101L, we had Igor and it was one of those courses where I enjoyed
+        what we were learning and doing. For this course, we often had labs and
+      </p>
+    </AccordionItemPanel>
+  </AccordionItem>
+</Accordion>

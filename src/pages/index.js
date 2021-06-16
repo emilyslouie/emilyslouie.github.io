@@ -19,7 +19,7 @@ function IndexPage({ data }) {
       <SEO title="Home" />
       <Hero />
       <Gallery section="Experience" projects={filteredExperience} />
-      <Gallery section="Side Hustles" projects={filteredProjects} />
+      <Gallery section="Other fun stuff" projects={filteredProjects} />
       <div className="project-section">
         <h2>I'm learning about...</h2>
         <hr />
