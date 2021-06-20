@@ -12,6 +12,7 @@ order: 2
 import { Link, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { DetailsBlog, Blockquote } from "../../components/details.js"
+import { NextPrevPosts } from "../../components/blogPost.js"
 import {
   Accordion,
   AccordionItem,
@@ -19,6 +20,10 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion"
+import arc from "../../images/blog/syde-1a/arc.png"
+import crab from "../../images/blog/syde-1a/crab.png"
+import gunship from "../../images/blog/syde-1a/gunship.png"
+import knightbus from "../../images/blog/syde-1a/knightbus.png"
 
 <div className="header">
   <h1>{props.pageContext.frontmatter.title}</h1>
@@ -34,6 +39,10 @@ My first term of Systems Design Engineering (SYDE) at the University of Waterloo
 Throughout this, I'm going to go over my thoughts on the academics, co-op process, and just SYDE in general.
 
 ## Academics
+
+![1A Schedule](../../images//blog/syde-1a/schedule.png)
+
+<p className="caption">This is what our 1A schedule looked like.</p>
 
 <Accordion allowZeroExpanded>
   <AccordionItem>
@@ -76,6 +85,19 @@ Throughout this, I'm going to go over my thoughts on the academics, co-op proces
         learning Solidworks and got me interested in the field of 3D design.
         While it was difficult at first, it ended up being fun towards the end.
       </p>
+      <div className="row">
+        <div className="column">
+          <img src={arc} alt="Simple model of the Arc de Triomphe" />
+          <img src={gunship} alt="Model of Star Wars Republic Gunship" />
+        </div>
+        <div className="column">
+          <img
+            src={knightbus}
+            alt="Model of the Knight Bus from Harry Potter"
+          />
+          <img src={crab} alt="3D printed crab puzzle" />
+        </div>
+      </div>
       <p>
         I wish we had more courses like 101L where we got to use a tool relevant
         to our industry and create things with it. I'm looking forward to SYDE
@@ -89,30 +111,127 @@ Throughout this, I'm going to go over my thoughts on the academics, co-op proces
       <AccordionItemButton>SYDE 111 (Calculus)</AccordionItemButton>
     </AccordionItemHeading>
     <AccordionItemPanel>
-      <p>For me, this was a difficult course. Despite coming</p>
       <p>
-        These two courses were worth only half a credit each and for the most
-        part, the coursework reflected that much work. Although, I do remember
-        staying at the E5 lab till late at night because I didn't have a Windows
-        machine that can run Solidworks and finish creating my Arc de Triomphe
-        model.
+        This course is basically first year engineering calculus. Note that if
+        you have friends in other engineering majors, you will not be covering
+        the same things in this first calculus course. Instead, get yourself
+        some computer science friends since this course more closely aligns with
+        their calculus course.
       </p>
       <p>
-        In 101, we covered engineering communication in the form of primarily
-        written communication. It was made up of weekly tutorials and a class
-        seminar with guest lecturers. In the tutorials, we would read short
-        texts and then write abstracts, executive summaries, or other analysis
-        pieces. While it may see intimidating like high school english, it ended
-        up being pretty simple and straightforward. One key thing I remember
-        about this course was the chance to interact with profs on a more
-        individual basis because our tutorials were composed of up to 30
-        students. This meant that it felt like high school again where the prof
-        might walk around and ask how we are doing.
+        In this course, we cover things like induction, derivatives, curve
+        sketching, optimization, Taylor polynomials, and a few other topics.
+        There were weekly quizzes and problem sets, as well as a midterm and
+        final exam which made up most of our final mark.
       </p>
       <p>
-        For 101L, we had Igor and it was one of those courses where I enjoyed
-        what we were learning and doing. For this course, we often had labs and
+        Some really good resources for this course were{" "}
+        <a
+          href="https://www.khanacademy.org"
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Khan Academy
+        </a>
+        , <a
+          href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA"
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Organic Chemistry Tutor
+        </a>, and <a
+          href="https://tutorial.math.lamar.edu"
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Paul's Math Notes
+        </a>. I know these along with my classmates really helped me understand the
+        content and pass the course.
+      </p>
+      <p>
+        For me, this was a difficult course. I finished the grade 12 math
+        courses in grade 11, so I had not done math in about a year by the time
+        I started university. Luckily, a lot of my notes came in handy because
+        my school happened to cover some of the concepts, but there were still a
+        lot of new, unfamiliar topics.
+      </p>
+      <p>
+        This was the course that really helped me come to realize that marks are
+        not the end of the world in university, and that while I may have had
+        high marks in high school, university is a different playing field.
+      </p>
+      <p>
+        That being said, I'm not great at math, nor do I really enjoy it. If you
+        like the subject then this is for you since it's a good introduction to
+        university level math.
       </p>
     </AccordionItemPanel>
   </AccordionItem>
+  <AccordionItem>
+    <AccordionItemHeading>
+      <AccordionItemButton>SYDE 113 (Linear Algebra)</AccordionItemButton>
+    </AccordionItemHeading>
+    <AccordionItemPanel> 
+      <p>
+        Some of the topics we covered in this course include coordinate systems, conic sections, vectors, planes, and matrices. This course had lectures and interactive tutorials with marked content. It was interesting because the lectures covered certain topics and then the interactive tutorials seemed to take that content in a different direction. However, the quizzes were fairly straightforward.
+      </p>
+      <p>
+        I didn't really know what to expect coming into this course, but it was different from what I expected. While this was definitely one of the more confusing courses, I tended to spend less time on it, only trying to learn the content when there were quizzes. 
+      </p>
+      <p>
+       Some advice I would give about this course is to treat it like the half credit it is. While it is daunting with all the new content and possibly confusing lectures, the material that is actually marked should not be too far out there.
+      </p>
+    </AccordionItemPanel>
+
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionItemHeading>
+      <AccordionItemButton>SYDE 121 (Intro to C++)</AccordionItemButton>
+    </AccordionItemHeading>
+    <AccordionItemPanel> 
+      <p>
+        Some of the topics we covered in this course include coordinate systems, conic sections, vectors, planes, and matrices. This course had lectures and interactive tutorials with marked content. It was interesting because the lectures covered certain topics and then the interactive tutorials seemed to take that content in a different direction. However, the quizzes were fairly straightforward.
+      </p>
+      <p>
+        I didn't really know what to expect coming into this course, but it was different from what I expected. While this was definitely one of the more confusing courses, I tended to spend less time on it, only trying to learn the content when there were quizzes. 
+      </p>
+      <p>
+       Some advice I would give about this course is to treat it like the half credit it is. While it is daunting with all the new content and possibly confusing lectures, the material that is actually marked should not be too far out there.
+      </p>
+    </AccordionItemPanel>
+
+  </AccordionItem>
 </Accordion>
+
+#### More posts
+
+<NextPrevPosts
+  projects={props.data.allMdx.edges}
+  current={props.pageContext.frontmatter.order}
+/>
+
+export const pageQuery = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { date: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            path
+            type
+            date
+            order
+            readTime
+          }
+        }
+      }
+    }
+  }
+`
