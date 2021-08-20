@@ -90,31 +90,18 @@ function Hero() {
       </NameHeading>
 
       <Subheading>
-        I’m a creator focused on engineering products and experiences that
-        empower people.
+        I’m a developer and designer striving to create experiences that empower
+        people.
       </Subheading>
       <div className="roles">
         <p>
-          {" "}
-          Developing at{" "}
+          Previously, created cool things at{" "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
-              Unity Technologies
+              Unity
             </a>
           </strong>
           {", "}
-          <strong>
-            <a href="https://uwblueprint.org" target="_blank" rel="noreferrer">
-              Blueprint
-            </a>
-          </strong>
-          {", and designing at "}
-          <strong>
-            <a href="https://cutc.ca.org" target="_blank" rel="noreferrer">
-              CUTC
-            </a>
-          </strong>
-          . Previously, created cool things at{" "}
           <strong>
             <a
               href="https://emily.louie.ca/blog/microsoft-2019"

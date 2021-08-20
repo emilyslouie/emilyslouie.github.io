@@ -1,0 +1,85 @@
+---
+title: Experimenting with in-game advertisements
+shortTitle: Unity AUI Internship Experience
+path: /unity
+type: experience
+thumbnail: "../images/thumbnails/covid-data.png"
+order: 8
+tags: [Frontend development, Prototyping, UX design, Data analysis]
+company: Unity
+role: Frontend developer
+timeline: May - Aug 2021
+---
+
+import { Link, graphql } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Details, Blockquote } from "../components/details.js"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion"
+import MoreProjects from "../components/moreProjects.js"
+import table from "../images/covid-data/table.png"
+import alberta from "../images/covid-data/alberta.png"
+import uk from "../images/covid-data/uk.png"
+import worldometer from "../images/covid-data/worldometer.png"
+import toggle from "../images/covid-data/toggle.png"
+
+<div className="header">
+  <h1 className="purple">{props.pageContext.frontmatter.shortTitle}</h1>
+  <h2>{props.pageContext.frontmatter.title}</h2>
+</div>
+
+As a product designer intern at the Ontario Digital Service when the COVID-19 pandemic began, I had the opportunity to design data visualizations to inform the public. Later in the same year, I returned as a full stack developer intern to continue the development of the data visualization pages. During my internship, I helped to launch three iterations of the site to production which continues receives over 450,000 views per month, and has received international accolades. Visit the live website at <a href="https://covid-19.ontario.ca/data" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.
+
+<Details
+  company={props.pageContext.frontmatter.company}
+  role={props.pageContext.frontmatter.role}
+  timeline={props.pageContext.frontmatter.timeline}
+  skills={props.pageContext.frontmatter.tags}
+/>
+
+![Header image of COVID-19 data microsite](../images/covid-data/header.png)
+
+#### More case studies
+
+<MoreProjects
+  projects={props.data.allMdx.edges}
+  current={props.pageContext.frontmatter.order}
+/>
+
+export const pageQuery = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            shortTitle
+            path
+            type
+            order
+            tags
+            company
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  height: 280
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP]
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

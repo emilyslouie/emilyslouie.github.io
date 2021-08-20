@@ -1,0 +1,73 @@
+---
+title: Prototyping two-handed interactions in XR
+shortTitle: Two-Handed XR Interactions
+path: /two-handed-xri
+type: project
+thumbnail: "../images/thumbnails/spotify.png"
+order: 3
+tags:
+  [XR design and development, Interaction design, Prototyping, Product thinking]
+company: Two-Handed XR Interactions
+role: Developer in team of 12
+timeline: 1 week in Jun 2020
+---
+
+import { Link, graphql } from "gatsby"
+import { DetailsProject, Blockquote } from "../components/details.js"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import MoreProjects from "../components/moreProjects.js"
+
+<div className="header">
+  <h1 className="purple">{props.pageContext.frontmatter.shortTitle}</h1>
+  <h2>{props.pageContext.frontmatter.title}</h2>
+</div>
+
+Six Degrees of Spotify is a website I created that demonstrates that the theory of <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation" className="link" target="_blank" rel="noreferrer">six degrees of separation</a> applies to the music world as well. This means that a musician is connected to almost every other musician through a chain of collaborations, typically with less than five artists between the two of them. From Paul McCartney to BLACKPINK to Ed Sheeran, this web of connections can be explored by searching for two artists, and a chain of connections with be displayed if there is a series of collaborations. I used data from <a href="https://developer.spotify.com/" className="link" target="_blank" rel="noreferrer">Spotify's API</a> which was gathered as of July 2020, and created this application using Java Spring Boot, the Vaadin UI framework, and a Neo4j graph database.
+
+<DetailsProject
+  role={props.pageContext.frontmatter.role}
+  timeline={props.pageContext.frontmatter.timeline}
+  skills={props.pageContext.frontmatter.tags}
+/>
+
+![Six Degrees of Spotify header image](../images/sixdegrees/header.png)
+
+#### More case studies
+
+<MoreProjects
+  projects={props.data.allMdx.edges}
+  current={props.pageContext.frontmatter.order}
+/>
+
+export const pageQuery = graphql`
+  query {
+    allMdx(
+      filter: { frontmatter: { company: { ne: null } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            shortTitle
+            path
+            type
+            order
+            tags
+            company
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  height: 280
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP]
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
