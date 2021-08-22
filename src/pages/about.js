@@ -4,7 +4,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 import about from "../assets/about.json"
-import Slide from "react-reveal/Slide"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion"
 import SocialMedia from "../components/socialmedia"
 import { Blockquote } from "../components/details"
 
@@ -40,75 +46,98 @@ const AboutPage = props => (
         </div>
       </div>
       <div className="resume">
-        <Slide bottom>
-          <div className="section">
-            <h2>Experience</h2>
-            {about["experience"].map(item => {
-              return (
-                <div className="entry">
+        <h2>Some of the things I've done</h2>
+        <div className="section">
+          <Accordion
+            allowZeroExpanded
+            preExpanded={["a"]}
+            allowMultipleExpanded
+          >
+            <AccordionItem uuid="a">
+              <AccordionItemHeading>
+                <AccordionItemButton>Experience</AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                {about["experience"].map(item => {
+                  return (
+                    <div className="entry">
+                      <h4>
+                        <a href={item.link} target="_blank" rel="noreferrer">
+                          {item.company}
+                        </a>{" "}
+                        – {item.role}
+                      </h4>
+                      <p className="date">{item.date}</p>
+                      {item["description"].map(point => {
+                        return (
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: point,
+                            }}
+                          ></p>
+                        )
+                      })}
+                    </div>
+                  )
+                })}
+              </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <AccordionItemHeading>
+                <AccordionItemButton>Community</AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                {about["community"].map(item => {
+                  return (
+                    <div className="entry">
+                      <h4>
+                        <a href={item.link} target="_blank" rel="noreferrer">
+                          {item.company}
+                        </a>{" "}
+                        – {item.role}
+                      </h4>
+                      <p className="date">{item.date}</p>
+                      {item["description"].map(point => {
+                        return (
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: point,
+                            }}
+                          ></p>
+                        )
+                      })}
+                    </div>
+                  )
+                })}
+              </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <AccordionItemHeading>
+                <AccordionItemButton>Education</AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div className="entry education">
                   <h4>
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      {item.company}
-                    </a>{" "}
-                    – {item.role}
+                    {about.education.school} –{" "}
+                    <a
+                      href={about.education.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {about.education.program}
+                    </a>
                   </h4>
-                  <p className="date">{item.date}</p>
-                  {item["description"].map(point => {
-                    return (
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: point,
-                        }}
-                      ></p>
-                    )
-                  })}
+                  <p className="date">{about.education.graduation}</p>
+                  <p>
+                    <strong>Relevant courses: </strong>
+                    {about.education.courses}
+                  </p>
+                  <p>{about.education.description}</p>
                 </div>
-              )
-            })}
-          </div>
-        </Slide>
-        <Slide bottom>
-          <div className="section">
-            <h2>Community</h2>
-            {about["community"].map(item => {
-              return (
-                <div className="entry">
-                  <h4>
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      {item.company}
-                    </a>{" "}
-                    – {item.role}
-                  </h4>
-                  <p className="date">{item.date}</p>
-                  {item["description"].map(point => {
-                    return (
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: point,
-                        }}
-                      ></p>
-                    )
-                  })}
-                </div>
-              )
-            })}
-          </div>
-        </Slide>
-        <Slide bottom>
-          <div className="section">
-            <h2>Education</h2>
-            <div className="entry education">
-              <h4>
-                {about.education.school} –{" "}
-                <a href={about.education.link} target="_blank" rel="noreferrer">
-                  {about.education.program}
-                </a>
-              </h4>
-              <p className="date">{about.education.graduation}</p>
-              <p>{about.education.description}</p>
-            </div>
-          </div>
-        </Slide>
+              </AccordionItemPanel>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
     </div>
   </Layout>

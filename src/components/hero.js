@@ -95,7 +95,18 @@ function Hero() {
       </Subheading>
       <div className="roles">
         <p>
-          Previously, created cool things at{" "}
+          I'm a{" "}
+          <strong>
+            <a
+              href="https://uwaterloo.ca/systems-design-engineering/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Systems Design Engineering
+            </a>
+          </strong>{" "}
+          student at the University of Waterloo. Previously, I've created cool
+          things at{" "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
               Unity

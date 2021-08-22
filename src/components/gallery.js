@@ -45,7 +45,7 @@ export const BlogGallery = props => {
       <Slide bottom>
         <BlogTitle>
           <h2>{props.section}</h2>
-          <Subheading>Just some scribbles and thoughts.</Subheading>
+          <Subheading>Just some thoughts and scribbles.</Subheading>
         </BlogTitle>
 
         {props.posts.map(({ node }) => {

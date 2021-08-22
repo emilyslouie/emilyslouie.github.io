@@ -2,8 +2,7 @@
   "about": {
     "tagline": "I'm a Systems Design Engineering student at the University of Waterloo aiming to make a positive impact on people's lives through technology.",
     "description": [
-      "I envision and create solutions using my building blocks of design and development to make the world a better place.",
-      "To me, solving problems are challenges I love tackling, and will embrace whenever I can because learning is a lifelong journey and it never stops.",
+      "I solve problems using my building blocks of design and development to make the world a better place. To me, learning is a lifelong journey and it never stops.",
       "When I'm not collaborating with others on fun projects, you can find me drawing, watching the latest Star Wars show or playing video games."
     ]
   },
@@ -12,6 +11,7 @@
     "program": "Systems Design Engineering (BASc)",
     "link": "https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering",
     "graduation": "Class of 2024",
+    "courses": "Human Factors of Design, Data Structures and Algorithms, Digital Systems",
     "description": "Systems Design Engineering is an interdisciplinary engineering that touches upon the software, business, and user design aspects of the engineering process with an emphasis on big picture thinking. I learn to connect the dots between traditional engineering disciplines and solve complex problems through code, modelling, design, and analytical thinking."
   },
   "experience": [
@@ -20,7 +20,10 @@
       "company": "Unity Technologies",
       "link": "https://unity.com",
       "date": "May - August 2021",
-      "description": [" "]
+      "description": [
+        "Created 7+ advertising experiments seen by almost 1 billion users and generated 5% more revenue",
+        "Followed best development practices and created a custom component library"
+      ]
     },
     {
       "role": "Full Stack Developer",
@@ -28,27 +31,26 @@
       "link": "https://www.ontario.ca/page/ontario-digital-service",
       "date": "September - December 2020",
       "description": [
-        "Developed Ontario's COVID-19 data visualizations at <a href=\"https://covid-19.ontario.ca/data\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca/data</a>, averaging 450,000 views per month",
-        "Architected ServiceOntario's future appointment booking system to be used by over 5 million people annually"
+        "Developed and launched 3 new versions of Ontario’s COVID-19 data visualizations at <a href=\"https://covid-19.ontario.ca/data\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca/data</a>, averaging 450,000 views per month"
       ]
     },
     {
-      "role": "Product Designer",
+      "role": "Product Design Intern",
       "company": "Ontario Digital Service",
       "link": "https://www.ontario.ca/page/ontario-digital-service",
       "date": "January - April 2020",
       "description": [
-        "Spearheaded the creation of <a href=\"https://covid-19.ontario.ca\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca</a> with 1.2 million views one week after launch",
+        "Spearheaded the creation of <a href=\"https://covid-19.ontario.ca\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca</a> with 1.25 million views one week after launch",
         "Redesigned a platform for government id renewals to be accessible by 5 million users annually"
       ]
     },
     {
-      "role": "Designer and Developer",
+      "role": "Software Engineering and Product Design Intern",
       "company": "Microsoft",
       "link": "https://medium.com/@emilyslouie/3-things-i-learned-at-microsoft-2f40bdf93c9b",
       "date": "July - August 2019",
       "description": [
-        "Designed and developed the frontend of an internal inventory tracker and request system to be used by 2,000 employees, reducing processing times by 85%"
+        "Designed and developed an internal inventory tracker used by over 2,000 employees which was launched in beta, and explored numerous Azure features and prototyped applications for the Hololens"
       ]
     }
   ],
@@ -59,18 +61,17 @@
       "link": "https://uwblueprint.org",
       "date": "August 2020 - Present",
       "description": [
-        "Designed a decision workflow platform for time, money, and professional expertise to be invested in local non-profits",
-        "Spearheaded the creation of a client management tool used by an organization helping to improve literacy education"
+        "Building internal tools to make development more efficient across Blueprint",
+        "Designed in an interdisciplinary team to create digital solutions in collaboration with non-profit organizations such as SVP Waterloo and Project Read"
       ]
     },
     {
       "role": "Lead Designer",
       "company": "Canadian Undergraduate Technology Conference",
       "link": "https://cutc.ca",
-      "date": "December 2019 - Present",
+      "date": "December 2019 - August 2021",
       "description": [
-        "Led the design team to establish a digital presence for the 2020 conference attended by over 2,000 students",
-        "Currently, leading the design team to brand the 2021 conference at <a href=\"https://cutc.ca\" target=\"_blank\" rel=\"noreferrer\">cutc.ca</a>"
+        "Led the design team to create designs for the 2020 and 2021 conferences attended by over 2,000 students (<a href=\"https://cutc.ca\" target=\"_blank\" rel=\"noreferrer\">cutc.ca</a>)"
       ]
     },
     {
