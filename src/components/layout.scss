@@ -306,8 +306,6 @@ $border-radius: 8px;
     z-index: 1;
     img {
       height: 280px;
-      // -o-object-fit: contain;
-      // object-fit: contain;
       z-index: -5;
       border-radius: 12px 12px 0 0 !important;
       margin-bottom: 0 !important;
@@ -671,6 +669,7 @@ nav {
   -moz-transition: 0.3s;
   z-index: 1;
   img {
+    display: initial !important;
     height: 280px;
     // -o-object-fit: contain;
     // object-fit: contain;

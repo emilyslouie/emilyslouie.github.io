@@ -26,7 +26,7 @@ function IndexPage({ data }) {
         <div className="learning">
           <ul>
             <li>3D web development</li>
-            <li>VR/AR/XR design and development</li>
+            <li>XR design and development</li>
             <li>Game development</li>
           </ul>
           <h3>
