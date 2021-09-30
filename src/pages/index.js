@@ -20,7 +20,7 @@ function IndexPage({ data }) {
       <Hero />
       <Gallery section="Experience" projects={filteredExperience} />
       <Gallery section="Other fun stuff" projects={filteredProjects} />
-      <div className="project-section">
+      {/* <div className="project-section">
         <h2>I'm learning about...</h2>
         <hr />
         <div className="learning">
@@ -40,7 +40,7 @@ function IndexPage({ data }) {
             </a>
           </h3>
         </div>
-      </div>
+      </div> */}
     </Layout>
   )
 }
