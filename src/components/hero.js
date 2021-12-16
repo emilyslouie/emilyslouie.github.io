@@ -105,8 +105,14 @@ function Hero() {
               Systems Design Engineering
             </a>
           </strong>{" "}
-          student at the University of Waterloo. Previously, I've created cool
-          things at{" "}
+          student at the University of Waterloo, and currently working on FigJam
+          at{" "}
+          <strong>
+            <a href="https://figma.com" target="_blank" rel="noreferrer">
+              Figma
+            </a>
+          </strong>
+          . Previously, I've created cool things at{" "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
               Unity

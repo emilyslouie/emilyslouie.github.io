@@ -17,6 +17,15 @@
   "experience": [
     {
       "role": "Software Engineering Intern",
+      "company": "Figma",
+      "link": "https://www.figma.com",
+      "date": "January - April 2022",
+      "description": [
+        "Working on the FigJam team to create high-value feature that help make design more collaborative and accessible"
+      ]
+    },
+    {
+      "role": "Software Engineering Intern",
       "company": "Unity Technologies",
       "link": "https://unity.com",
       "date": "May - August 2021",
@@ -56,10 +65,10 @@
   ],
   "community": [
     {
-      "role": "Developer (current) & Product Designer (2020-2021)",
+      "role": "Developer (2021) & Product Designer (2020-2021)",
       "company": "Blueprint",
       "link": "https://uwblueprint.org",
-      "date": "August 2020 - Present",
+      "date": "August 2020 - August 2021",
       "description": [
         "Building internal tools to make development more efficient across Blueprint",
         "Designed in an interdisciplinary team to create digital solutions in collaboration with non-profit organizations such as SVP Waterloo and Project Read"
