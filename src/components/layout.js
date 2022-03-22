@@ -154,9 +154,9 @@ const Layout = ({ children }) => {
                 <Link className="effect" to="/about">
                   About
                 </Link>
-                <Link className="effect" to="/blog">
+                {/* <Link className="effect" to="/blog">
                   Blog
-                </Link>
+                </Link> */}
                 <a
                   className="effect"
                   href={Resume}
