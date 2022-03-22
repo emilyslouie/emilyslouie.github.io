@@ -121,7 +121,7 @@ function Hero() {
           {", "}
           <strong>
             <a
-              href="https://emily.louie.ca/blog/microsoft-2019"
+              href="https://emily.louie.ca/microsoft"
               target="_blank"
               rel="noreferrer"
             >
