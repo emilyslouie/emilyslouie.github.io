@@ -21,7 +21,10 @@
       "link": "https://www.figma.com",
       "date": "January - April 2022",
       "description": [
-        "Working on the FigJam team to create high-value feature that help make design more collaborative and accessible"
+        "Shipped 3 features to FigJam which has over 400,000+ weekly active users",
+        "Created the universal inserts modal which consolidated 4 entry points into a single one",
+        "Refined canvas snapping and guideline algorithms to improve the user interaction experience",
+        "Owned and created emoji reactions and custom CSS animations in real time for keywords typed in cursor chat for FigJam's first year anniversary"
       ]
     },
     {
