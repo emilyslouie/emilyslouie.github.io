@@ -110,7 +110,7 @@ function Hero() {
             <a href="https://figma.com" target="_blank" rel="noreferrer">
               Figma
             </a>
-          </strong>{" "}
+          </strong>
           {", "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
