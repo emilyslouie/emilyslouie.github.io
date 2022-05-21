@@ -48,7 +48,7 @@ const Subheading = styled.h3`
 function Hero() {
   let words = [
     "problem solver",
-    "designer & developer",
+    "developer & designer",
     "engineering student",
     "xr enthusiast",
     "avid gamer",
@@ -90,8 +90,7 @@ function Hero() {
       </NameHeading>
 
       <Subheading>
-        I’m a developer and designer striving to create experiences that empower
-        people.
+        I’m a developer and designer striving to empower people.
       </Subheading>
       <div className="roles">
         <p>
