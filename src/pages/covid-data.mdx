@@ -33,7 +33,7 @@ import toggle from "../images/covid-data/toggle.png"
   <h2>{props.pageContext.frontmatter.title}</h2>
 </div>
 
-As a product design intern at the Ontario Digital Service when the COVID-19 pandemic began, I had the opportunity to design data visualizations to inform the public. Later in the same year, I returned as a full stack engineering intern to continue the development of the data visualization pages. During my internship, I helped to launch three iterations of the site to production which continues receives over 450,000 views per month, and has received international accolades. Visit the live website at <a href="https://covid-19.ontario.ca/data" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.
+As a product design intern at the Ontario Digital Service when the COVID-19 pandemic began, I had the opportunity to design data visualizations to inform the public. Later in the same year, I returned as a full stack engineering intern to continue the development of the data visualization pages. During my internship, I helped to launch three iterations of the site to production which continues receives over 450,000 views per month, and has received international accolades. Visit the live website at <a href="https://covid-on-2020.netlify.app" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.
 
 <Details
   company={props.pageContext.frontmatter.company}
@@ -381,7 +381,7 @@ At the end of my internship, the data visualizations were not yet launched as de
 
 I stepped into the development role in my second internship with the Ontario Digital Service in September 2020, and it was like coming back to an old friend. Having context on the COVID-19 data visualizations as a product designer helped to minimize onboarding, and I could jump right in as a developer.
 
-One of the first things I did was understand how the overall app works. Essentially, when a user requests <a href="https://covid-19.ontario.ca/data" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>, it gets the site information from Drupal, an open source CMS that the government of Ontaria uses widely for its static websites. This page in Drupal goes off to request the actual data visualizations on AWS cloudfront via a custom script written in the Drupal page's HTML and shows the data visualizations as if they were done inline.
+One of the first things I did was understand how the overall app works. Essentially, when a user requests <a href="https://covid-on-2020.netlify.app" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>, it gets the site information from Drupal, an open source CMS that the government of Ontaria uses widely for its static websites. This page in Drupal goes off to request the actual data visualizations on AWS cloudfront via a custom script written in the Drupal page's HTML and shows the data visualizations as if they were done inline.
 
 The page on AWS cloudfront is served by an S3 bucket. This is kept current by a build process triggered in our Gitlab CI/CD processes. In this process, it pings the <a href="https://data.ontario.ca/en/group/2019-novel-coronavirus" className="link" target="_blank" rel="noreferrer">Ontario data catalogue</a> for the latest COVID-19 data, and processes the React app. The app is built once a day to gather the latest data.<br/><br/>
 
@@ -443,7 +443,7 @@ In addition, in around October, Ontario was seeing an increase in COVID-19 cases
 
 I was put in charge of developing a small data visualization to display statistics related to the app's downloads and usage to alert others. While creating this, I optimized the build bundle, and refactored the styles to reduce build times. It was a really good experience, as I was able to own the entire end-to-end process from setting up the repository and app structure, collaborating with the design team and product manager closely, and really solidify my fundamentals in building new graphs with our app's components.
 
-Below is the final iteration of the COVID-19 alert app statistics gathered as of January 16th, 2021 and is live at <a href="https://covid-19.ontario.ca/covidalert" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/covidalert</a>.<br/><br/>
+Below is the final iteration of the COVID-19 alert app statistics gathered as of January 16th, 2021 and is live at <a href="https://covid-alert-on-2020.netlify.app" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/covidalert</a>.<br/><br/>
 
 <iframe
   style="border: 1px solid rgba(0, 0, 0, 0.1);"
@@ -467,7 +467,7 @@ Another major issue I helped to resolve was the overwhelming global styles that 
 
 ## Final site
 
-At the end of my second internship as a developer in December 2020, we were about to launch the fifth iteration of data visualizations. Below is the final iteration that I helped launch at the end of my second internship and displays data gathered as of January 15th, 2021. You can see the live site at <a href="https://covid-19.ontario.ca/data" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.<br/><br/>
+At the end of my second internship as a developer in December 2020, we were about to launch the fifth iteration of data visualizations. Below is the final iteration that I helped launch at the end of my second internship and displays data gathered as of January 15th, 2021. You can see the live site at <a href="https://covid-on-2020.netlify.app" className="link" target="_blank" rel="noreferrer">covid-19.ontario.ca/data</a>.<br/><br/>
 
 <iframe
   style="border: 1px solid rgba(0, 0, 0, 0.1);"

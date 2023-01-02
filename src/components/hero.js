@@ -126,6 +126,12 @@ function Hero() {
             >
               Microsoft
             </a>
+          </strong>
+          {", "}
+          <strong>
+            <a href="https://lumafield.com" target="_blank" rel="noreferrer">
+              Lumafield
+            </a>
           </strong>{" "}
           and{" "}
           <strong>

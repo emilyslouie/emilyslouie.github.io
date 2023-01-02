@@ -17,6 +17,16 @@
   "experience": [
     {
       "role": "Software Engineering Intern",
+      "company": "Lumafield",
+      "link": "https://lumafield.com",
+      "date": "September - December 2022",
+      "description": [
+        "Iterated and developed a user-friendly interface for the world’s first accessible x-ray CT scanner for engineers using TypeScript and React",
+        "Architected and built an authentication system for the interface and API routes using Python and Ansible"
+      ]
+    },
+    {
+      "role": "Software Engineering Intern",
       "company": "Figma",
       "link": "https://www.figma.com",
       "date": "January - April 2022",
@@ -43,7 +53,7 @@
       "link": "https://www.ontario.ca/page/ontario-digital-service",
       "date": "September - December 2020",
       "description": [
-        "Developed and launched 3 new versions of Ontario’s COVID-19 data visualizations at <a href=\"https://covid-19.ontario.ca/data\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca/data</a>, averaging 450,000 views per month"
+        "Developed and launched 3 new versions of Ontario’s COVID-19 data visualizations at <a href=\"https://covid-on-2020.netlify.app\" target=\"_blank\" rel=\"noreferrer\">covid-19.ontario.ca/data</a>, averaging 450,000 views per month"
       ]
     },
     {
@@ -59,7 +69,7 @@
     {
       "role": "Software Engineering and Product Design Intern",
       "company": "Microsoft",
-      "link": "https://medium.com/@emilyslouie/3-things-i-learned-at-microsoft-2f40bdf93c9b",
+      "link": "https://emily.louie.ca/microsoft",
       "date": "July - August 2019",
       "description": [
         "Designed and developed an internal inventory tracker used by over 2,000 employees which was launched in beta, and explored numerous Azure features and prototyped applications for the Hololens"
