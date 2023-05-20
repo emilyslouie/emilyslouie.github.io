@@ -94,7 +94,14 @@ function Hero() {
       </Subheading>
       <div className="roles">
         <p>
-          I'm a{" "}
+          I'm a software engineering intern at{" "}
+          <strong>
+            <a href="https://figma.com" target="_blank" rel="noreferrer">
+              Figma
+            </a>
+          </strong>{" "}
+          working on the core editor
+          {", and a "}
           <strong>
             <a
               href="https://uwaterloo.ca/systems-design-engineering/"
@@ -106,12 +113,6 @@ function Hero() {
           </strong>{" "}
           student at the University of Waterloo. Previously, I've created cool
           things at{" "}
-          <strong>
-            <a href="https://figma.com" target="_blank" rel="noreferrer">
-              Figma
-            </a>
-          </strong>
-          {", "}
           <strong>
             <a href="https://unity.com" target="_blank" rel="noreferrer">
               Unity

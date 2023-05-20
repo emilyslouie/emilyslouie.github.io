@@ -17,6 +17,15 @@
   "experience": [
     {
       "role": "Software Engineering Intern",
+      "company": "Figma",
+      "link": "https://www.figma.com",
+      "date": "May - August 2023",
+      "description": [
+        "Working on making the editor as usable as possible by designers, engineers, and product teams using C++ and TypeScript"
+      ]
+    },
+    {
+      "role": "Software Engineering Intern",
       "company": "Lumafield",
       "link": "https://lumafield.com",
       "date": "September - December 2022",
