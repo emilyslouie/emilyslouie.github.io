@@ -479,8 +479,8 @@ html.has-open .tray {
     cursor: pointer;
   }
 
-  /* Cards flip in place here, so an open one makes room for its close button. */
-  .slot.open {
-    margin-bottom: 52px;
+  /* Tapping an open card flips it back, so the close button stays only for screen readers. */
+  .slot.open .close {
+    clip-path: inset(50%);
   }
 }

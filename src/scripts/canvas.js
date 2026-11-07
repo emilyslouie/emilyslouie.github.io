@@ -396,8 +396,12 @@ deck.addEventListener("click", event => {
   const slot = event.target.closest(".slot")
   if (!slot) return
   if (event.target.closest(".close")) return setOpen(slot, false)
-  // An open card stays open, so its text can be selected and copied.
-  if (slot.classList.contains("open") || event.target.closest("a")) return
+  if (event.target.closest("a")) return
+  if (slot.classList.contains("open")) {
+    // Off the canvas a tap flips it back, unless it ends a text selection.
+    if (!canvasMode.matches && event.detail > 0 && !getSelection().toString()) setOpen(slot, false)
+    return
+  }
   if (!canvasMode.matches || event.detail === 0) {
     // On the canvas, pointer presses are handled above; detail is 0 only for keyboard clicks.
     if (openSlot) setOpen(openSlot, false)
@@ -559,10 +563,17 @@ function switchTheme() {
 }
 
 themeButton.addEventListener("click", () => {
-  if (calm || !document.startViewTransition) switchTheme()
+  // WebKit misplaces the snapshot of a scrolled page, so the crossfade is kept to the canvas, which never scrolls.
+  if (calm || !canvasMode.matches || !document.startViewTransition) switchTheme()
   else document.startViewTransition(switchTheme)
 })
 labelTheme()
+
+/* ---- Rest the art on cards that are off screen. ---- */
+const sight = new IntersectionObserver(entries =>
+  entries.forEach(entry => entry.target.classList.toggle("away", !entry.isIntersecting)),
+)
+slots.forEach(slot => sight.observe(slot))
 
 /* ---- Deal the cards in. ---- */
 if (!calm) {
