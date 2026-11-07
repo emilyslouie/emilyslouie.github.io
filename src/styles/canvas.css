@@ -1,0 +1,486 @@
+/* The canvas needs a mouse or trackpad: touch devices and pages without JavaScript scroll normally.
+   Keep this query in step with `canvasMode` in canvas.js. */
+.viewport {
+  background-image: radial-gradient(var(--dots) 1px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.js,
+  html.js body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html.js .viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    background-position: var(--px, 0) var(--py, 0);
+    background-size: calc(22px * var(--z, 1)) calc(22px * var(--z, 1));
+  }
+
+  html.js .viewport.panning {
+    cursor: grabbing;
+  }
+
+  html.js .world {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translate(var(--px, 0), var(--py, 0)) scale(var(--z, 1));
+    transform-origin: 0 0;
+  }
+
+  .movable {
+    position: relative;
+    cursor: grab;
+    transform: translate(var(--x, 0), var(--y, 0)) rotate(var(--r, 0deg)) scale(var(--s, 1));
+    transition: scale 0.2s var(--spring);
+  }
+
+  .movable.held {
+    cursor: grabbing;
+  }
+
+  .sticky.held {
+    box-shadow: 0 1px 0 #0000000d, 0 26px 34px -16px var(--shadow);
+  }
+
+  .name {
+    width: fit-content;
+  }
+}
+
+html:not(.js) .toolbar,
+html:not(.js) .tray {
+  display: none;
+}
+
+/* Theme change: a crossfade that doesn't block clicks while it plays. */
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+  animation-timing-function: ease;
+}
+
+/* The toggle animates live, so a frozen copy of it must not fade over the top. */
+::view-transition-old(theme-icon) {
+  display: none;
+}
+
+::view-transition-new(theme-icon) {
+  animation: none;
+}
+
+::view-transition-group(theme-icon) {
+  animation: none;
+}
+
+.mover,
+.placed {
+  -webkit-touch-callout: none;
+}
+
+/* Stays over the visible screen however far the world has been panned. */
+.scrim {
+  position: absolute;
+  z-index: 1000;
+  left: calc(var(--px, 0px) / var(--z, 1) * -1);
+  top: calc(var(--py, 0px) / var(--z, 1) * -1);
+  width: calc(100vw / var(--z, 1));
+  height: calc(100dvh / var(--z, 1));
+  background: var(--scrim);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.scrim[hidden] {
+  display: none;
+}
+
+.slot.open .mover {
+  cursor: default;
+}
+
+.back {
+  cursor: text;
+  touch-action: pan-y;
+  -webkit-touch-callout: default;
+}
+
+/* Sits in the space under an open card, outside the part that flips. */
+.close {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px / var(--z, 1));
+  translate: -50% 0;
+  scale: calc(1 / var(--z, 1));
+  transform-origin: top center;
+  display: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--edge);
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 10px 22px -10px var(--shadow);
+}
+
+.slot.open .close {
+  display: grid;
+}
+
+.close:hover {
+  color: var(--accent);
+}
+
+.close svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Things added to the canvas */
+.layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.placed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: grab;
+  transform: translate(var(--x, 0), var(--y, 0)) rotate(var(--r, 0deg)) scale(var(--s, 1));
+  transition: scale 0.2s var(--spring);
+}
+
+/* Figma-style selection: a blue outline on hover, and corner handles when selected.
+   Lines and handles stay the same size on screen however big the item or the zoom. */
+.frame {
+  --line: calc(1px / var(--s, 1) / var(--z, 1));
+  --knob: calc(8px / var(--s, 1) / var(--z, 1));
+  --out: calc(6px / var(--s, 1) / var(--z, 1));
+  position: absolute;
+  inset: calc(-3px / var(--s, 1) / var(--z, 1));
+  z-index: 1;
+  border: var(--line) solid #0d99ff;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.placed:hover > .frame,
+.movable:hover > .frame,
+.selected > .frame,
+.resizing > .frame,
+.rotating > .frame {
+  opacity: 1;
+}
+
+.handle {
+  position: absolute;
+  display: none;
+  width: var(--knob);
+  height: var(--knob);
+  border: var(--line) solid #0d99ff;
+  background: #fff;
+  pointer-events: auto;
+  translate: -50% -50%;
+}
+
+.selected .handle,
+.resizing .handle,
+.selected .rotor,
+.rotating .rotor {
+  display: block;
+}
+
+/* Rotate zones: invisible, just past each corner. */
+.rotor {
+  position: absolute;
+  display: none;
+  width: calc(18px / var(--s, 1) / var(--z, 1));
+  height: calc(18px / var(--s, 1) / var(--z, 1));
+  pointer-events: auto;
+  translate: -50% -50%;
+}
+
+.rotor.nw { left: calc(var(--out) * -1); top: calc(var(--out) * -1); cursor: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27%3E%3Cg transform=%27rotate%28180 12 12%29%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27black%27 stroke-width=%271.5%27/%3E%3C/g%3E%3C/svg%3E") 12 12, crosshair; }
+.rotor.ne { left: calc(100% + var(--out)); top: calc(var(--out) * -1); cursor: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27%3E%3Cg transform=%27rotate%28270 12 12%29%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27black%27 stroke-width=%271.5%27/%3E%3C/g%3E%3C/svg%3E") 12 12, crosshair; }
+.rotor.sw { left: calc(var(--out) * -1); top: calc(100% + var(--out)); cursor: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27%3E%3Cg transform=%27rotate%2890 12 12%29%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27black%27 stroke-width=%271.5%27/%3E%3C/g%3E%3C/svg%3E") 12 12, crosshair; }
+.rotor.se { left: calc(100% + var(--out)); top: calc(100% + var(--out)); cursor: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27%3E%3Cg transform=%27rotate%280 12 12%29%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M18 7Q18 18 7 18M15 10l3-3 3 3M10 15l-3 3 3 3%27 stroke=%27black%27 stroke-width=%271.5%27/%3E%3C/g%3E%3C/svg%3E") 12 12, crosshair; }
+
+.handle.nw { left: 0; top: 0; cursor: nwse-resize; }
+.handle.ne { left: 100%; top: 0; cursor: nesw-resize; }
+.handle.sw { left: 0; top: 100%; cursor: nesw-resize; }
+.handle.se { left: 100%; top: 100%; cursor: nwse-resize; }
+
+.placed.held {
+  cursor: grabbing;
+}
+
+.sticker.held {
+  filter: drop-shadow(0 0 0.5px #fff) drop-shadow(0 14px 14px var(--shadow));
+}
+
+.placed.removing {
+  opacity: 0.4;
+}
+
+.sticker {
+  display: block;
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  border: 0;
+  background: none;
+  filter: drop-shadow(0 0 0.5px #fff) drop-shadow(0 6px 8px var(--shadow));
+}
+
+.sticker svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Toolbar */
+.toolbar {
+  position: fixed;
+  z-index: 900;
+  left: 50%;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 5px;
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 12px 28px -10px var(--shadow);
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.toolbar.dropping {
+  background: var(--accent);
+}
+
+html.has-open .toolbar,
+html.has-open .tray {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toolbar button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 11px;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.toolbar button:hover,
+.toolbar [aria-expanded="true"] {
+  background: var(--chip);
+}
+
+.toolbar svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-tip] {
+  position: relative;
+}
+
+@media (hover: hover) {
+  [data-tip]:hover::after,
+  [data-tip]:focus-visible::after {
+    content: attr(data-tip);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    translate: -50% 0;
+    padding: 5px 9px;
+    border-radius: 7px;
+    background: var(--ink);
+    color: var(--bg);
+    font: 500 0.75rem/1.2 var(--mono);
+    white-space: nowrap;
+    pointer-events: none;
+    animation: tip 0.12s 0.15s ease-out backwards;
+  }
+
+  /* The tray already sits where the Stickers tooltip would go. */
+  [aria-expanded="true"][data-tip]::after {
+    display: none;
+  }
+}
+
+@keyframes tip {
+  from {
+    opacity: 0;
+    translate: -50% 3px;
+  }
+}
+
+.rule {
+  width: 1px;
+  height: 22px;
+  margin-inline: 4px;
+  background: var(--edge);
+}
+
+/* Sun in dark mode, moon in light mode. Values come from the old site's react-toggle-dark-mode.
+   Every part shares one curve, sampled from its spring (mass 4, tension 250, friction 35). */
+.theme-icon {
+  --theme-move: 1.2s cubic-bezier(0.34, 1.4, 0.5, 1);
+  rotate: 50deg;
+  view-transition-name: theme-icon;
+}
+
+@supports (transition-timing-function: linear(0, 1)) {
+  .theme-icon {
+    --theme-move: 1.2s linear(0, 0.031, 0.113, 0.227, 0.358, 0.495, 0.627, 0.748, 0.854, 0.942, 1.011, 1.061, 1.096, 1.116, 1.124, 1.122, 1.114, 1.101, 1.085, 1.068, 1.051, 1.036, 1.022, 1.01, 1.001, 0.994, 0.989, 0.986, 0.985, 0.985, 0.985, 0.987, 0.989, 0.991, 0.993, 0.995, 1);
+  }
+}
+
+.theme-disc {
+  r: 5px;
+  fill: currentColor;
+  transition: r var(--theme-move);
+}
+
+.theme-cut {
+  cx: 100%;
+  cy: 0%;
+  transition:
+    cx var(--theme-move),
+    cy var(--theme-move);
+}
+
+.theme-rays {
+  opacity: 1;
+  transition: opacity var(--theme-move);
+}
+
+[data-theme="light"] .theme-disc {
+  r: 9px;
+}
+
+[data-theme="light"] .theme-cut {
+  cx: 50%;
+  cy: 23%;
+}
+
+[data-theme="light"] .theme-rays {
+  opacity: 0;
+}
+
+.tray {
+  position: fixed;
+  z-index: 900;
+  left: 50%;
+  bottom: calc(max(16px, env(safe-area-inset-bottom)) + 66px);
+  translate: -50% 0;
+  display: grid;
+  grid-template-columns: repeat(3, 72px);
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 12px 28px -10px var(--shadow);
+}
+
+.tray[hidden] {
+  display: none;
+}
+
+.tray button {
+  width: 72px;
+  height: 72px;
+  padding: 8px;
+  border: 0;
+  border-radius: 12px;
+  background: none;
+  cursor: grab;
+  touch-action: none;
+}
+
+.tray button:hover {
+  background: var(--chip);
+}
+
+.tray svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .placed,
+  .toolbar,
+  .theme-disc,
+  .theme-cut,
+  .theme-rays {
+    transition: none;
+  }
+}
+
+/* Away from the canvas, only the theme switch remains. */
+@media (hover: none), (pointer: coarse) {
+  .layer,
+  .tray,
+  .frame,
+  #stickers,
+  #tidy,
+  .rule {
+    display: none;
+  }
+
+  .toolbar {
+    left: auto;
+    right: 16px;
+    translate: none;
+  }
+
+  .mover {
+    cursor: pointer;
+  }
+
+  /* Cards flip in place here, so an open one makes room for its close button. */
+  .slot.open {
+    margin-bottom: 52px;
+  }
+}

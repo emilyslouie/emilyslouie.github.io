@@ -1,0 +1,36 @@
+---
+import "../styles/global.css"
+
+const { title = "Emily Louie" } = Astro.props
+const description = "Emily Louie, engineering at Figma."
+---
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#17151e" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f5fb" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+    <script is:inline>
+      // Runs before paint so the page never flashes the wrong theme.
+      document.documentElement.classList.add("js")
+      let saved = null
+      try { saved = localStorage.getItem("theme") } catch {}
+      document.documentElement.dataset.theme =
+        saved || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
