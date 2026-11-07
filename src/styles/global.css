@@ -1,0 +1,630 @@
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #17151e;
+  --ink: #f4f0f8;
+  --muted: #aaa4b6;
+  --accent: #c989df;
+  --dots: #ffffff26;
+  --chip: #ffffff14;
+  --edge: #ffffff14;
+  --shadow: #000000b0;
+  --scrim: #0d0b12b8;
+  --panel: #24212d;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f8f5fb;
+  --ink: #211a2d;
+  --muted: #5e5670;
+  --accent: #8a3fb0;
+  --dots: #2d243826;
+  --chip: #2d243814;
+  --edge: #2d24381f;
+  --shadow: #3d2a5266;
+  --scrim: #f8f5fbc7;
+  --panel: #ffffff;
+}
+
+:root {
+  --sans: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, monospace;
+  --page: 792px;
+  --spring: cubic-bezier(0.2, 1.15, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  min-height: 100dvh;
+  background-color: var(--bg);
+  color: var(--ink);
+  font: 400 1rem/1.5 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Header */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px 32px;
+  max-width: var(--page);
+  margin-inline: auto;
+  padding: max(28px, env(safe-area-inset-top)) 16px 8px;
+}
+
+h1 {
+  font: 700 clamp(2.25rem, 5.4vw, 3.25rem) / 1.05 var(--sans);
+  letter-spacing: -0.03em;
+}
+
+.role {
+  margin-top: 2px;
+  font: 500 0.9375rem/1.4 var(--mono);
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+  font: 500 0.8125rem var(--mono);
+}
+
+.links a,
+.links button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links a:hover,
+.links button:hover {
+  color: var(--accent);
+}
+
+/* Grid */
+main {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding: 16px 16px calc(112px + env(safe-area-inset-bottom));
+}
+
+.deck {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2.4vw, 24px);
+}
+
+.slot {
+  position: relative;
+  aspect-ratio: 5 / 7;
+}
+
+/* The slot keeps its place in the grid; the mover is what travels. */
+.mover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  perspective: 1000px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  transform: translate(var(--x, 0), var(--y, 0)) rotate(var(--r, var(--lean, 0deg)));
+  transition:
+    transform 0.5s var(--spring),
+    width 0.4s var(--spring),
+    scale 0.2s var(--spring);
+}
+
+.slot:nth-child(odd) .mover { --lean: -0.7deg; }
+.slot:nth-child(even) .mover { --lean: 0.6deg; }
+
+@media (hover: hover) {
+  .mover:hover {
+    scale: 1.015;
+  }
+}
+
+.mover.held {
+  z-index: 40;
+  cursor: grabbing;
+  transition: scale 0.2s var(--spring);
+}
+
+.mover.held .face {
+  box-shadow: inset 0 0 0 1px var(--edge), 0 34px 54px -18px var(--shadow);
+}
+
+.slot.open .mover {
+  z-index: 100;
+  cursor: default;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  container-type: size;
+  transform-style: preserve-3d;
+  transition: transform 0.6s var(--spring);
+}
+
+.slot.open .card {
+  transform: rotateY(180deg);
+}
+
+.face {
+  grid-area: 1 / 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 6cqw;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6cqw;
+  background: var(--c);
+  color: var(--t);
+  font: inherit;
+  text-align: left;
+  box-shadow: inset 0 0 0 1px var(--edge), 0 18px 36px -18px var(--shadow);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  cursor: inherit;
+}
+
+.front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 38%, #ffffff30 50%, transparent 62%) 130% 0 / 260% 100%;
+  transition: background-position 0.7s ease;
+}
+
+.mover:hover .front::after {
+  background-position: -30% 0;
+}
+
+.back {
+  gap: 4cqw;
+  overflow-y: auto;
+  transform: rotateY(180deg);
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font: 500 max(10px, 3.5cqw) / 1.2 var(--mono);
+  opacity: 0.85;
+}
+
+.art {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  margin-block: 2cqw;
+  color: var(--t);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.art * {
+  animation-play-state: paused;
+}
+
+.mover:hover .art * {
+  animation-play-state: running;
+}
+
+.fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.soft {
+  opacity: 0.34;
+}
+
+h2 {
+  font: 700 max(1rem, 8.5cqw) / 1.05 var(--sans);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font: 700 max(1.25rem, 8.5cqw) / 1.05 var(--sans);
+  letter-spacing: -0.025em;
+}
+
+.org {
+  margin-top: 1.6cqw;
+  font: 500 max(10px, 3.5cqw) / 1.3 var(--mono);
+  opacity: 0.85;
+}
+
+.copy {
+  font-size: max(0.875rem, 4.5cqw);
+  line-height: 1.42;
+}
+
+.copy ul {
+  display: grid;
+  gap: 2cqw;
+}
+
+.copy a {
+  text-underline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.go {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 99px;
+  background: var(--t);
+  color: var(--c);
+  font-weight: 600;
+  font-size: max(0.8125rem, 4cqw);
+  text-decoration: none;
+}
+
+.actions:has(.go + .go) .go + .go {
+  background: none;
+  color: var(--t);
+  box-shadow: inset 0 0 0 1px var(--t);
+}
+
+/* Links: underline on hover, and a small arrow on anything that leaves the site. */
+a:hover,
+.links a:hover,
+.go:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a[href^="http"]::after {
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='black' stroke-width='1.2'%3E%3Cpath d='M2.5 9.5l7-7M3.5 2.5h6v6'/%3E%3C/svg%3E");
+  content: "";
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.25em;
+  background: currentColor;
+  -webkit-mask: var(--arrow) center / contain no-repeat;
+  mask: var(--arrow) center / contain no-repeat;
+}
+
+/* Art loops */
+@keyframes frames {
+  0%, 12% { transform: translateX(0); }
+  50%, 62% { transform: translateX(-74px); }
+  100% { transform: translateX(0); }
+}
+@keyframes ease-along {
+  0%, 8% { offset-distance: 0%; }
+  72%, 100% { offset-distance: 100%; }
+}
+@keyframes playhead {
+  0%, 8% { transform: translateX(0); }
+  72%, 100% { transform: translateX(172px); }
+}
+@keyframes roam {
+  0%, 100% { transform: translate(0, 0); }
+  45% { transform: translate(-46px, 26px); }
+  70% { transform: translate(-10px, 40px); }
+}
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  70%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes wave {
+  0% { opacity: 0; transform: translateX(0); }
+  15% { opacity: 1; }
+  75% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateX(-42px); }
+}
+@keyframes buzz {
+  0%, 60% { opacity: 0.34; }
+  72% { opacity: 1; }
+  100% { opacity: 0.34; }
+}
+@keyframes route {
+  0% { stroke-dashoffset: 1; }
+  70%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes hop {
+  0%, 20% { opacity: 0.34; }
+  30%, 85% { opacity: 1; }
+  100% { opacity: 0.34; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.34; }
+  30% { opacity: 1; }
+  60% { opacity: 0.34; }
+}
+
+.a-frames { animation: frames 5s ease-in-out infinite; }
+.a-ease {
+  offset-path: path("M24 138C96 138 92 28 216 28");
+  animation: ease-along 3s cubic-bezier(0.6, 0, 0.2, 1) infinite;
+}
+.a-head { animation: playhead 3s cubic-bezier(0.6, 0, 0.2, 1) infinite; }
+.a-roam { animation: roam 6s ease-in-out infinite; }
+.a-draw {
+  stroke-dasharray: 1;
+  animation: draw 4s ease-out infinite alternate;
+}
+.a-pulse { animation: pulse 2.4s ease-in-out infinite; }
+/* Figma Sites: a cursor drags the window narrower and back, and the page reflows at each breakpoint.
+   --pull is how far the right edge has moved in; everything else follows it. */
+@property --pull {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+@keyframes pull {
+  0%, 10% { --pull: 0; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  45%, 55% { --pull: -136; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+  90%, 100% { --pull: 0; }
+}
+.a-site { animation: pull 7s infinite; }
+.s-edge { transform: translateX(calc(var(--pull) * 1px)); }
+.s-line { transform-origin: 26px 0; transform: scaleX(calc((188 + var(--pull)) / 188)); }
+.s-fit { transform-origin: 28px 0; transform: scaleX(calc((184 + var(--pull)) / 184)); }
+/* Crossfades at 150 and 100 units wide. */
+.s-wide { opacity: clamp(0, (var(--pull) + 56) / 6, 1); }
+.s-mid { opacity: min(clamp(0, (-50 - var(--pull)) / 6, 1), clamp(0, (var(--pull) + 106) / 6, 1)); }
+.s-narrow { opacity: clamp(0, (-100 - var(--pull)) / 6, 1); }
+.a-wave { opacity: 0; animation: wave 1.8s ease-out infinite; }
+.a-buzz { opacity: 0.34; animation: buzz 1.8s ease-out infinite; }
+.a-route { stroke-dasharray: 1; animation: route 3.6s ease-in-out infinite; }
+.a-hop { opacity: 0.34; animation: hop 3.6s ease-in-out infinite; }
+
+/* Not found */
+.lost {
+  display: grid;
+  gap: 8px;
+  padding-block: 30vh;
+}
+
+.lost h1 {
+  color: var(--ink);
+}
+
+/* Off the clock: sticky notes under the cards, in the cards' own colours and line style. */
+.off-clock {
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.section-label {
+  margin-bottom: 18px;
+  font: 500 0.8125rem var(--mono);
+  color: var(--muted);
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 24px);
+}
+
+.sticky {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  aspect-ratio: 1;
+  padding: 16px;
+  border-radius: 3px;
+  background: var(--note);
+  color: #24202c;
+  font: 600 1rem/1.25 var(--sans);
+  box-shadow: 0 1px 0 #0000000d, 0 16px 24px -16px var(--shadow);
+  rotate: var(--tilt, 0deg);
+}
+
+/* A strip of tape holding each note up. */
+.sticky::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  width: 52px;
+  height: 18px;
+  translate: -50% 0;
+  rotate: -3deg;
+  background: #ffffff8c;
+  box-shadow: 0 1px 2px #0000001a;
+}
+
+.sticky:nth-child(4n + 1) { --tilt: -1.4deg; }
+.sticky:nth-child(4n + 2) { --tilt: 0.8deg; }
+.sticky:nth-child(4n + 3) { --tilt: -0.5deg; }
+.sticky:nth-child(4n) { --tilt: 1.5deg; }
+
+/* A loose pencil sketch filling the rest of the note. */
+.doodle {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: visible;
+  scale: 1.15;
+  translate: 0 4%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.8;
+  filter: url(#sketch);
+}
+
+.doodle * {
+  vector-effect: non-scaling-stroke;
+}
+
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 760px) {
+  .interests {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .interests {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Large screens: three columns. */
+@media (min-width: 1100px) {
+  :root {
+    --page: 1184px;
+  }
+
+  .deck {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Phones: one column of wide, short cards. */
+@media (max-width: 520px) {
+  .deck {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .slot,
+  .mover {
+    aspect-ratio: 4 / 3;
+  }
+
+  .face {
+    padding: 5cqw;
+    border-radius: 5cqw;
+  }
+
+  h2 {
+    font-size: max(1.25rem, 7.5cqw);
+  }
+
+  h3 {
+    font-size: max(1.125rem, 6.5cqw);
+  }
+
+  .copy {
+    font-size: 0.875rem;
+    line-height: 1.35;
+  }
+
+  /* Short and wide when flipped too, so the back drops the tag and year (the front shows them). */
+  .back {
+    gap: 2.4cqw;
+  }
+
+  .back .meta {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mover,
+  .card,
+  .front::after {
+    transition: none;
+  }
+
+  .art * {
+    animation: none !important;
+  }
+}
+
+/* Touch screens have no hover, so the drawings simply keep moving. */
+@media (hover: none) {
+  .art * {
+    animation-play-state: running;
+  }
+}

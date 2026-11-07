@@ -1,5 +1,12 @@
-# Welcome to my portfolio!
+# emily.louie.ca
 
-This portfolio was created using React+Gatsby+MDX and is hosted with Github pages.
+My personal site: one page of cards, built with [Astro](https://astro.build).
 
-It uses `react-toggle-dark-mode` and `use-dark-mode` to assist with the dark mode implementation.
+- Add or edit a card in `src/content/cards/`. Each Markdown file is one card, and `order` sets its position.
+- Card drawings live in `src/components/Art.astro`.
+
+```sh
+npm install
+npm run dev
+npm run build
+```

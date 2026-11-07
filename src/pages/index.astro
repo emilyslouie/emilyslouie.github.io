@@ -1,0 +1,106 @@
+---
+import { getCollection } from "astro:content"
+import Base from "../layouts/Base.astro"
+import Card from "../components/Card.astro"
+import "../styles/canvas.css"
+
+const cards = (await getCollection("cards")).sort((a, b) => a.data.order - b.data.order)
+
+// Line doodles drawn in the same style as the card art.
+const interests = [
+  {
+    text: "Playing and collecting Pokémon cards",
+    note: "#ffd98a",
+    doodle: `<g transform="translate(18 18) scale(0.34) translate(-50 -50)"><ellipse cx="50" cy="50" rx="44" ry="42"/><path d="M13.3 26.8C20 23.5 28 25.5 34.2 34.8L40.8 37 49.5 26.6 58.7 37 65.8 34.8C72 25.5 80 23.5 86.7 26.8"/><path d="M34.2 34.8L37.5 53 39.5 57M65.8 34.8L62.5 53 60.5 57"/><ellipse cx="22.6" cy="52.2" rx="6.8" ry="12.2"/><ellipse cx="22.3" cy="55.7" rx="3.4" ry="6"/><ellipse cx="77.4" cy="52.2" rx="6.8" ry="12.2"/><ellipse cx="77.10000000000001" cy="55.7" rx="3.4" ry="6"/><path d="M50 47.6C56 47.6 61 54 61 61S56 72.3 50 72.3 39 67.5 39 61 44 47.6 50 47.6z"/><path d="M39.5 63.3Q50 67 60.5 63.3"/></g>`,
+  },
+  {
+    text: "Gaming",
+    note: "#e3c4f8",
+    doodle: `<path d="M9 12h18a6 6 0 0 1 6 6v2a5 5 0 0 1-9 3l-1-2H13l-1 2a5 5 0 0 1-9-3v-2a6 6 0 0 1 6-6z"/><path d="M11 15v5M8.5 17.5h5"/><circle cx="24" cy="16.5" r="1"/><circle cx="27" cy="19.5" r="1"/>`,
+  },
+  {
+    text: "Drawing",
+    note: "#efeaf3",
+    doodle: `<path d="M7 29l2.5-8L24 6.5l5.5 5.5L15 26.5z"/><path d="M21 9.5l5.5 5.5M9.5 21l5.5 5.5"/>`,
+  },
+]
+---
+
+<Base>
+  <div class="viewport" id="viewport">
+    <div class="world" id="world">
+      <header class="top">
+        <div class="name movable">
+          <h1>Emily Louie</h1>
+          <p class="role">Engineering at Figma</p>
+        </div>
+        <nav class="links" aria-label="Elsewhere">
+          <a href="https://www.linkedin.com/in/emilyslouie/">LinkedIn</a>
+          <a href="https://github.com/emilyslouie">GitHub</a>
+        </nav>
+      </header>
+
+      <main>
+        <ol class="deck" id="deck" aria-label="Things I’ve worked on">
+          {cards.map(card => <Card card={card} />)}
+        </ol>
+
+        <section class="off-clock" aria-labelledby="off-clock">
+          <p class="section-label" id="off-clock">Off the clock</p>
+          <ul class="interests">
+            {interests.map(({ text, note, doodle }) => (
+              <li class="sticky movable" style={`--note:${note}`}>
+                <span>{text}</span>
+                <svg class="doodle" viewBox="0 0 36 36" aria-hidden="true" set:html={doodle} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+
+      <svg class="defs" aria-hidden="true">
+        <filter id="sketch">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+          <feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+
+      <div class="layer" id="layer"></div>
+      <div class="scrim" id="scrim" hidden></div>
+    </div>
+  </div>
+
+  <div class="tray" id="tray" role="group" aria-label="Stickers" hidden></div>
+
+  <div class="toolbar" id="toolbar" role="toolbar" aria-label="Canvas tools">
+    <button id="stickers" type="button" aria-label="Stickers" aria-expanded="false" data-tip="Stickers">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a1 1 0 0 1 1 1v9l-6 6H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" /><path d="M20 14h-5a1 1 0 0 0-1 1v5" /></svg>
+    </button>
+    <span class="rule" aria-hidden="true"></span>
+    <button id="theme" type="button" data-tip="Switch theme">
+      <!-- The sun and moon toggle from the old site, without React. -->
+      <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="theme-mask">
+          <rect width="100%" height="100%" fill="white" stroke="none" />
+          <circle class="theme-cut" r="9" fill="black" stroke="none" />
+        </mask>
+        <circle class="theme-disc" cx="12" cy="12" mask="url(#theme-mask)" />
+        <g class="theme-rays">
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </g>
+      </svg>
+    </button>
+    <button id="tidy" type="button" aria-label="Tidy up" data-tip="Tidy up">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><rect x="14" y="14" width="6" height="6" rx="1" /></svg>
+    </button>
+  </div>
+</Base>
+
+<script src="../scripts/canvas.js"></script>
